@@ -1,0 +1,21 @@
+.quienes-somos {
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  grid-gap: 7.25vw;
+
+  & > img {
+    height: 100vh;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.quienes-somos-right {
+  display: flex;
+  align-items: center;
+
+  div:first-child {
+    max-width: 40vw;
+    margin: 0 auto;
+  }
+}
