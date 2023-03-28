@@ -1,3 +1,20 @@
 .politica-de-cambio {
-  padding-top: 20vh;
+  padding-top: 15vh;
+}
+
+.politica-images {
+  display: flex;
+  align-items: center;
+  margin-top: 6vh;
+
+  img:first-child {
+    width: 10vw;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  img:last-child {
+    margin-left: -6rem;
+    width: 10vw;
+  }
 }
