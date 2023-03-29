@@ -4,5 +4,14 @@
 
 import { application } from "./application"
 
+import FlatpickrController from "./flatpickr_controller"
+application.register("flatpickr", FlatpickrController)
+
+import GalleriaController from "./galleria_controller"
+application.register("galleria", GalleriaController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import TrixController from "./trix_controller"
+application.register("trix", TrixController)

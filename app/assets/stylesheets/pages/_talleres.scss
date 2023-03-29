@@ -1,0 +1,15 @@
+.talleres {
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+
+  & > img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.talleres-right {
+  display: flex;
+  flex-direction: column;
+}

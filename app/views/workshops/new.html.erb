@@ -1,0 +1,11 @@
+<div class="talleres-new" data-controller="trix">
+  <%= simple_form_for @workshop do |f| %>
+    <h4>Crear taller</h4>
+    <%= f.input :name, label: "Título" %>
+    <%= f.input :description, as: :rich_text_area, label: "Descripción" %>
+    <%= f.input :date, label: "Fecha", as: :string, input_html: { data: {controller: "flatpickr"}}  %>
+    <%= f.input :time, label: "Hora" %>
+    <%= f.input :photo, as: :file, label: "Imagen" %>
+    <%= f.submit "Crear taller" %>
+  <% end %>
+</div>

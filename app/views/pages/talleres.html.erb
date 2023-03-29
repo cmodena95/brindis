@@ -1,0 +1,21 @@
+<div class="talleres">
+  <%= image_tag "talleres/entrada_byn.png" %>
+
+  <div class="talleres-right" data-controller="galleria">
+    <div class="galleria">
+      <div class="galleria__inner">
+        <% @talleres.each do |taller| %>
+          <div class="galleria__item">
+            <div class="galleria__item-inner">
+              1
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+
+
+    <%= link_to "+ Taller", new_workshop_path %>
+  </div>
+</div>

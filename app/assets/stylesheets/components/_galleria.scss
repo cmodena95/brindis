@@ -1,0 +1,39 @@
+.galleria{
+  width: 44vw;
+  height: 50vh;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: none;
+
+  &__inner{
+      display: flex;
+      align-items: start;
+      position: relative;
+      cursor: grab;
+    touch-action: none;
+
+      &:active{
+          cursor: grabbing;
+      }
+  }
+
+  &__item{
+      flex: 0 0 300px;
+      padding: 0 1rem;
+
+      &-inner{
+          height: 400px;
+          display: flex;
+          align-items:center;
+          justify-content: center;
+          font-size: 3rem;
+          font-family: sans-serif;
+          color: #666;
+          background: #999;
+      }
+  }
+}

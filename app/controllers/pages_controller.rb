@@ -7,4 +7,8 @@ class PagesController < ApplicationController
 
   def quines_somos
   end
+
+  def talleres
+    @talleres = Workshop.all
+  end
 end
