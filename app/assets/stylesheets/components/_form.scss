@@ -6,23 +6,38 @@
   padding: 1rem;
   border-radius: 20px;
   margin-top: 2rem;
+  align-items: center;
+  transition: 0.25s ease all;
+
+  & > div > input, textarea {
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  & > div > input {
+    height: 2rem;
+  }
+
+  div {
+    width: 100%;
+  }
 
   p {
     font-size: 1rem;
   }
 
-  input {
-    border: none;
-    background-color: white;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-
-    &:first-child {
-      height: 2rem;
-    }
-
-    &:last-child {
-      height: 7rem;
-    }
+  label {
+    margin-bottom: 0.25rem;
   }
+
+  textarea {
+    height: 4rem;
+  }
+}
+
+.appear {
+  opacity: 0;
 }

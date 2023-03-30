@@ -1,6 +1,7 @@
 class WorkshopsController < ApplicationController
   def show
     @workshop = Workshop.find(params[:id])
+    @contact = Contact.new
     authorize @workshop
   end 
  

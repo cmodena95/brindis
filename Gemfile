@@ -14,6 +14,8 @@ gem "pg", "~> 1.1"
 
 gem "devise"
 
+gem 'mail_form', '~> 1.10'
+
 gem "pundit"
 
 gem "browser"

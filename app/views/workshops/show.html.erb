@@ -3,22 +3,42 @@
     <%= cl_image_tag @workshop.photo.key %>
   </div>
 
-  <div class="taller-show-right">
+  <div class="taller-show-right" data-controller="toggle">
     <p><%= @workshop.name.upcase %></p>
     <p><%= @workshop.description %></p>
 
     <div class="taller-show-btns">
       <%= link_to "Registrarse", "#", class: "button-grey" %>
-      <%= button_to "Consulta", "#", class: "button-grey" %>
+      <%= button_to "Consulta", "#", class: "button-grey", data: { action: "click->toggle#toggle" } %>
     </div>
 
-    <form class="contact-form d-none" action="mailto:cmodena95@gmail.com">
-      <p>Dejanos tu mensaje y mail para poder ayudarte en tu consulta!<br>Muchas Gracias :)</p>
-      <label for="mail">Mail</label>
-      <input type="text" name="mail">
-      <label for="content">Mensaje/Nombre y Numero de Telefono</label>
-      <input type="text" name="content">
-      <input type="submit" class="button-white">
-    </form>
+    <%= form_for [@workshop, @contact], html: {class: "contact-form appear", data: {toggle_target: "element"}} do |form| %>
+      <% if @contact.errors.any? %>
+        <div id="error_explanation" class="bg-rose-200 pt-3 pb-1 mb-4 px-4 rounded-md">
+          <div class="font-bold text-rose-700 text-sm pb-4"><%= pluralize(@contact.errors.count, "error") %> prohibited this page from being saved:</div>
+
+          <ul class="pb-0 mb-0">
+            <% @contact.errors.each do |error| %>
+              <li class="text-rose-600 pl-4 text-sm"><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="d-flex flex-column">
+        <p>Dejanos tu mensaje y mail para poder ayudarte en tu consulta!<br>Muchas Gracias :)</p>
+        <%= form.label :email %>
+        <%= form.text_field :email %>
+      </div>
+      <div class="d-flex flex-column">
+
+        <%= form.label :content %>
+        <%= form.text_area :content %>
+
+      </div>
+      <%= form.submit "Send Message", class: "button-white" %>
+
+    <% end %>
+
   </div>
 </div>

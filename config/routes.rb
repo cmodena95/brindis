@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   get "/politica_de_cambio", to: "pages#politica_de_cambio"
   get "/talleres", to: "pages#talleres"
 
-  resources :workshops, only: [:new, :create, :show]
+  resources :workshops, only: [:new, :create, :show] do
+    resources :contacts, only: [:create]
+  end
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
