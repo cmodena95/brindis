@@ -2,20 +2,31 @@
   <%= image_tag "talleres/entrada_byn.png" %>
 
   <div class="talleres-right" data-controller="galleria">
-    <div class="galleria">
-      <div class="galleria__inner">
-        <% @talleres.each do |taller| %>
-          <div class="galleria__item">
-            <div class="galleria__item-inner">
-              1
+    <section class="slider">
+      <button class="slider__control prev"></button>
+      <button class="slider__control next"></button>
+      <div class="slider__container" data-multislide="true" data-step="4">
+        <% @talleres.each do |taller|  %>
+          <div class="slider__item">
+            <div>
+              <%= cl_image_tag taller.photo.key %>
+              <p><%= taller.name.upcase %></p>
+              <div class="line-clamp">
+                <%= taller.description %>
+              </div>
             </div>
+            <%= link_to "Mas info", workshop_path(taller), class: "mt-2", style: "text-decoration: underline;" %>
           </div>
         <% end %>
       </div>
-    </div>
+    </section>
+
+    <% if user_signed_in? %>
+      <%= link_to "+ Taller", new_workshop_path, class: "mt-4" %>
+    <% end %>
+  </div>
 
 
 
-    <%= link_to "+ Taller", new_workshop_path %>
   </div>
 </div>

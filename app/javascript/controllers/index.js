@@ -13,5 +13,8 @@ application.register("galleria", GalleriaController)
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import ToggleController from "./toggle_controller"
+application.register("toggle", ToggleController)
+
 import TrixController from "./trix_controller"
 application.register("trix", TrixController)

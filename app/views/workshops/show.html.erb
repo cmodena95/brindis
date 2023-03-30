@@ -1,0 +1,24 @@
+<div class="taller-show">
+  <div class="taller-show-left">
+    <%= cl_image_tag @workshop.photo.key %>
+  </div>
+
+  <div class="taller-show-right">
+    <p><%= @workshop.name.upcase %></p>
+    <p><%= @workshop.description %></p>
+
+    <div class="taller-show-btns">
+      <%= link_to "Registrarse", "#", class: "button-grey" %>
+      <%= button_to "Consulta", "#", class: "button-grey" %>
+    </div>
+
+    <form class="contact-form" action="mailto:cmodena95@gmail.com">
+      <p>Dejanos tu mensaje y mail para poder ayudarte en tu consulta!<br>Muchas Gracias :)</p>
+      <label for="mail">Mail</label>
+      <input type="text" name="mail">
+      <label for="content">Mensaje/Nombre y Numero de Telefono</label>
+      <input type="text" name="content">
+      <input type="submit" class="button-white">
+    </form>
+  </div>
+</div>

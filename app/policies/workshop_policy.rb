@@ -9,4 +9,8 @@ class WorkshopPolicy < ApplicationPolicy
   def create?
     user
   end
+
+  def show?
+    true
+  end
 end

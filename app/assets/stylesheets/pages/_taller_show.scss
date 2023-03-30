@@ -1,0 +1,27 @@
+.taller-show {
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  padding: 6rem;
+  grid-gap: 5rem;
+
+  & > .taller-show-left > img {
+    height: 70vh;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.25);
+  }
+}
+
+.taller-show-left {
+}
+
+.taller-show-right {
+  font-size: 0.75rem;
+}
+
+.taller-show-btns {
+  width: 20vw;
+  display: flex;
+  justify-content: space-between;
+}
