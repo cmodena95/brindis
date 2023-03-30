@@ -6,16 +6,10 @@
   padding: 1rem;
   border-radius: 20px;
   margin-top: 2rem;
+  align-items: center;
+  transition: 0.25s ease all;
 
-  p {
-    font-size: 1rem;
-  }
-
-  textarea {
-    height: 4rem;
-  }
-  
-  input:nth-child(3), textarea {
+  & > div > input, textarea {
     border: none;
     background-color: white;
     border-radius: 10px;
@@ -23,7 +17,27 @@
     padding: 0 0.5rem;
   }
 
-  input:nth-child(3) {
-      height: 2rem;
-    }
+  & > div > input {
+    height: 2rem;
+  }
+
+  div {
+    width: 100%;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  label {
+    margin-bottom: 0.25rem;
+  }
+
+  textarea {
+    height: 4rem;
+  }
+}
+
+.appear {
+  opacity: 0;
 }
