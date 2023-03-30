@@ -12,13 +12,14 @@
       <%= button_to "Consulta", "#", class: "button-grey" %>
     </div>
 
-    <form class="contact-form" action="mailto:cmodena95@gmail.com">
+    <form class="contact-form" action="mailto:cmodena95@gmail.com" enctype="text/plain" >
       <p>Dejanos tu mensaje y mail para poder ayudarte en tu consulta!<br>Muchas Gracias :)</p>
       <label for="mail">Mail</label>
       <input type="text" name="mail">
       <label for="content">Mensaje/Nombre y Numero de Telefono</label>
-      <input type="text" name="content">
+      <textarea type="text" name="content"></textarea>
       <input type="submit" class="button-white">
     </form>
+
   </div>
 </div>

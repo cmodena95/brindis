@@ -11,18 +11,19 @@
     font-size: 1rem;
   }
 
-  input {
+  textarea {
+    height: 4rem;
+  }
+  
+  input:nth-child(3), textarea {
     border: none;
     background-color: white;
     border-radius: 10px;
     margin-bottom: 1rem;
+    padding: 0 0.5rem;
+  }
 
-    &:first-child {
+  input:nth-child(3) {
       height: 2rem;
     }
-
-    &:last-child {
-      height: 7rem;
-    }
-  }
 }
