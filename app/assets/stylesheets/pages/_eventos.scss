@@ -1,0 +1,39 @@
+.eventos-outer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eventos {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 90vw;
+  height: 80vh;
+}
+
+.eventos-row {
+  display: flex;
+}
+
+.eventos-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.25);
+  padding: 0.5rem;
+  border-radius: 10px;
+  width: 15vw;
+  justify-content: space-between;
+
+  p, .trix-content {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  img {
+    height: 20vh;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}

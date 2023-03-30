@@ -11,4 +11,8 @@ class PagesController < ApplicationController
   def talleres
     @talleres = Workshop.all
   end
+
+  def eventos
+    @events = Event.all
+  end
 end

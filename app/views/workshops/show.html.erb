@@ -12,7 +12,11 @@
       <%= button_to "Consulta", "#", class: "button-grey", data: { action: "click->toggle#toggle" } %>
     </div>
 
-    <%= form_for [@workshop, @contact], html: {class: "contact-form appear", data: {toggle_target: "element"}} do |form| %>
+    <% flash.each do |key, message| %>
+      <p class="alert alert-<%= key %>"><%= message %></p>
+    <% end %>
+
+    <%= form_for [@workshop, @contact], html: {class: "contact-form d-none", data: {toggle_target: "element"}} do |form| %>
       <% if @contact.errors.any? %>
         <div id="error_explanation" class="bg-rose-200 pt-3 pb-1 mb-4 px-4 rounded-md">
           <div class="font-bold text-rose-700 text-sm pb-4"><%= pluralize(@contact.errors.count, "error") %> prohibited this page from being saved:</div>
@@ -30,12 +34,17 @@
         <%= form.label :email %>
         <%= form.text_field :email %>
       </div>
-      <div class="d-flex flex-column">
 
+      <div class="d-flex flex-column">
         <%= form.label :content %>
         <%= form.text_area :content %>
-
       </div>
+
+      <div class= "d-none">
+        <%= form.label :nickname %>
+        <%= form.text_field :nickname, :hint => 'Leave this field blank!' %>
+      </div>
+
       <%= form.submit "Send Message", class: "button-white" %>
 
     <% end %>
