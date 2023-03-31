@@ -1,0 +1,22 @@
+<div class="event-show">
+  <div class="event-show-left">
+    <%= cl_image_tag @event.poster.key %>
+  </div>
+
+  <div class="event-show-right">
+    <h5><strong><em><%= @event.title.upcase %></em></strong></h5>
+    <p><strong><%= @event.description %></strong></p>
+    <br>
+    <p><strong>A continuación les dejamos videos y fotos del Evento:</strong></p>
+    
+    <div class="photos-grid">
+      <% @event.photos.take(8).each do |photo| %>
+        <%= cl_image_tag photo.key, class: "event-photo" %>
+      <% end %>
+    </div>
+    
+    <% if user_signed_in? %>
+      <%= link_to "+ Photo", edit_event_path(@event) %>
+    <% end %>
+  </div>
+</div>

@@ -1,15 +1,20 @@
 class ContactsController < ApplicationController
   def create
-    @workshop = Workshop.find(params[:workshop_id])
     @contact = Contact.new(params[:contact])
     @contact.request = request
     authorize @contact
     if @contact.deliver
-      flash.now[:notice] = 'Mensaje enviado'
+      flash.now[:success] = 'Message sent!'
       render "workshops/show", status: :unprocessable_entity
     else
-      flash.now[:error] = 'Mensaje no enviado'
+      flash.now[:error] = 'Could not send message'
       render "workshops/show", status: :unprocessable_entity
     end
+  end
+
+  private
+
+  def contact_params
+    params.require(:contact).permit(:email, :content)
   end
 end

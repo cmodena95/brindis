@@ -13,9 +13,38 @@
     <% end %>
 
     <div></div>
-    <div class="info-grid">
+    <div class="info-grid" data-bs-toggle="modal" data-bs-target="#exampleModal">
       <p>Proyecto Brindis invita a la creación de prendas cómodas y versátiles. Usar brindis es vestir con estilo. Es aceptarnxs y aceptar a todxs. Somos un proyecto familiar, creado por tres hermanas que surge como una opción alternative a la industria de la moda. Buscamos generar una producción humana y consciente dentro de nuestras posibilidades.</p>
     </div>
     <div></div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <%= image_tag "logo.png", class: "logo" %>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <a href="https://brindisespumante.com.ar/account/login/" class="modal-btn">
+          <p>Inicia Sesion</p>
+          <i class="fa-solid fa-caret-right"></i>
+        </a>
+        <a href="https://brindisespumante.com.ar/account/register/" class="modal-btn">
+          <p>Registrarte en Brindis</p>
+          <i class="fa-solid fa-caret-right"></i>
+        </a>
+        <a class="modal-btn">
+          <p>Invitado</p>
+          <i class="fa-solid fa-caret-right"></i>
+        </a>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
   </div>
 </div>

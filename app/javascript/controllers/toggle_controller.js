@@ -6,6 +6,10 @@ export default class extends Controller {
 
   toggle(event) {
     event.preventDefault()
-    this.elementTarget.classList.toggle("appear")
+    this.elementTarget.classList.toggle("d-none")
+  }
+
+  toggleReplace() {
+    
   }
 }
