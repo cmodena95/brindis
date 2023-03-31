@@ -1,5 +1,5 @@
-<div class="talleres-new" data-controller="trix">
-  <%= simple_form_for @workshop do |f| %>
+<div class="talleres-new new-form" data-controller="trix">
+  <%= simple_form_for @workshop, html: {class: "new-form"} do |f| %>
     <h4>Crear taller</h4>
     <%= f.input :name, label: "Título" %>
     <%= f.input :description, as: :rich_text_area, label: "Descripción" %>

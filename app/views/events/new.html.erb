@@ -1,5 +1,5 @@
 <div class="talleres-new" data-controller="trix">
-  <%= simple_form_for @event do |f| %>
+  <%= simple_form_for @event, html: {class: "new-form"} do |f| %>
     <h4>Crear evento</h4>
     <%= f.input :title, label: "Título" %>
     <%= f.input :description, as: :rich_text_area, label: "Descripción" %>

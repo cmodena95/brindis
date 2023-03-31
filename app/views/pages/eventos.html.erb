@@ -1,32 +1,31 @@
 <div class="eventos-outer">
   <div class="eventos">
     <div class="eventos-row">
-      <h5>EVENTOS POR VENIR</h5>
-      <% @events.each do |event| %>
+      <h5 class="bold">EVENTOS POR VENIR</h5>
+      <% @events.take(5).each do |event| %>
         <div class="eventos-card">
           <%= cl_image_tag event.poster.key %>
 
           <div>
             <p><strong><%= event.title.upcase %></strong></p>
-            <div class="line-clamp-2"><%= event.description %></div>
-            <p>Fecha: <%= event.date.strftime("%A, %b %d") %></p>
-            <p>Horarios: <%= event.start_time.strftime("%H:%M") %> a <%= event.end_time.strftime("%H:%M") %>hs</p>
+            <p><strong><%= event.description.to_plain_text.truncate(50) %></strong> <%= link_to "Mas info", event_path(event), class: "bold" %></p>
+            <p>Fecha: <%= event.date.strftime("%e de %b %Y") %></p>
+            <p>Horarios: <%= event.start_time.strftime("%H:%M") %> a <%= event.end_time.strftime("%H:%M") %> hs.</p>
           </div>
         </div>
       <% end %>
     </div>
 
     <div class="eventos-row">
-      <h5>EVENTOS PASADOS</h5>
-      <% @events.each do |event| %>
+      <h5 class="bold">EVENTOS PASADOS</h5>
+      <% @events.take(5).each do |event| %>
         <div class="eventos-card">
           <%= cl_image_tag event.poster.key %>
-
           <div>
             <p><strong><%= event.title.upcase %></strong></p>
-            <div class="line-clamp-2"><%= event.description %></div>
-            <p>Fecha: <%= event.date.strftime("%A, %b %d") %></p>
-            <p>Horarios: <%= event.start_time.strftime("%H:%M") %> a <%= event.end_time.strftime("%H:%M") %>hs</p>
+            <p><strong><%= event.description.to_plain_text.truncate(50) %></strong> <%= link_to "Mas info", event_path(event), class: "bold" %></p>
+            <p>Fecha: <%= event.date.strftime("%e de %b %Y") %></p>
+            <p>Horarios: <%= event.start_time.strftime("%H:%M") %> a <%= event.end_time.strftime("%H:%M") %> hs.</p>
           </div>
         </div>
       <% end %>
