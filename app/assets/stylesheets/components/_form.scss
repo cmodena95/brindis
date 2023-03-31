@@ -38,7 +38,10 @@
   }
 }
 
-.new-form {
+.new-form, .edit-form {
   max-width: 45vw;
+}
+
+.new-form {
   margin-top: 20vh;
 }

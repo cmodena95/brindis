@@ -1,0 +1,7 @@
+<div class="talleres-new" data-controller="trix">
+  <%= simple_form_for @event, html: {class: "edit-form"} do |f| %>
+    <h4>Subir fotos de <%= @event.title %></h4>
+    <%= f.input :photos, as: :file, label: "Fotos", input_html: { multiple: true } %>
+    <%= f.submit "Crear evento" %>
+  <% end %>
+</div>

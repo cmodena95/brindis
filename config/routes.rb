@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     resources :contacts, only: [:create]
   end
 
-  resources :events, only: [:show, :new, :create]
+  resources :events, only: [:show, :new, :create, :edit, :update]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

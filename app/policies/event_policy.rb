@@ -9,4 +9,12 @@ class EventPolicy < ApplicationPolicy
   def create?
     user
   end
+
+  def show?
+    true
+  end
+
+  def update?
+    true
+  end
 end
