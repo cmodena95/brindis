@@ -5,7 +5,7 @@
 
 .showroom_mobile_top {
   height: 40vh;
-  padding: 7vh 4vw;
+  padding: 12vh 4vw;
 }
 
 .showroom_mobile_bottom{
@@ -36,6 +36,12 @@
   width: 36px;
 }
 
+#wpp-logo-bottom {
+  display: flex;
+  height: 56px;
+  width: 56px;
+}
+
 #mail-logo {
   height: 32px;
   width: 42px;
@@ -57,5 +63,33 @@
 }
 
 .showroom_contact {
+  margin: 20px 0;
+  p {
+    margin: 0;
+  }
+}
+
+.bottom-text {
+  padding: 2px;
+  margin: 3vh 6vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.25);
+  background-color: white;
+}
+
+.inside-text {
   margin: 0;
+  padding: 8px;
+  font-size: 18px;
+}
+
+.icon-bottom{
+  height: 72%;
+  display: flex;
+  margin: 50px 24px;
+  justify-content: end;
+  align-items: flex-end;
 }
