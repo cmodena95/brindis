@@ -4,13 +4,13 @@
   </div>
 
   <div class="event-show-right">
-    <h5><em><%= @event.title.upcase %></em></h5>
+    <h5><strong><em><%= @event.title.upcase %></em></strong></h5>
     <p><strong><%= @event.description %></strong></p>
     <br>
     <p><strong>A continuación les dejamos videos y fotos del Evento:</strong></p>
     
     <div class="photos-grid">
-      <% @event.photos.each do |photo| %>
+      <% @event.photos.take(8).each do |photo| %>
         <%= cl_image_tag photo.key, class: "event-photo" %>
       <% end %>
     </div>

@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   end
 
   def showroom
+    @contact = Contact.new
   end
 
   def quines_somos
@@ -13,6 +14,6 @@ class PagesController < ApplicationController
   end
 
   def eventos
-    @events = Event.all
+    @events = Event.all.sort_by(&:created_at)
   end
 end

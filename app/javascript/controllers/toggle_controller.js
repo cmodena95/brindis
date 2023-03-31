@@ -8,4 +8,8 @@ export default class extends Controller {
     event.preventDefault()
     this.elementTarget.classList.toggle("d-none")
   }
+
+  toggleReplace() {
+    
+  }
 }

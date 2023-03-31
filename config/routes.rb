@@ -7,9 +7,8 @@ Rails.application.routes.draw do
   get "/talleres", to: "pages#talleres"
   get "/eventos", to: "pages#eventos"
 
-  resources :workshops, only: [:new, :create, :show] do
-    resources :contacts, only: [:create]
-  end
+  resources :workshops, only: [:new, :create, :show]
+  resources :contacts, only: [:create]
 
   resources :events, only: [:show, :new, :create, :edit, :update]
 

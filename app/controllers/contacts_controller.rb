@@ -1,6 +1,5 @@
 class ContactsController < ApplicationController
   def create
-    @workshop = Workshop.find(params[:workshop_id])
     @contact = Contact.new(params[:contact])
     @contact.request = request
     authorize @contact
@@ -11,5 +10,11 @@ class ContactsController < ApplicationController
       flash.now[:error] = 'Could not send message'
       render "workshops/show", status: :unprocessable_entity
     end
+  end
+
+  private
+
+  def contact_params
+    params.require(:contact).permit(:email, :content)
   end
 end

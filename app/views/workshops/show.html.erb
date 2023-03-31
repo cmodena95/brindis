@@ -16,7 +16,7 @@
       <p class="alert alert-<%= key %>"><%= message %></p>
     <% end %>
 
-    <%= form_for [@workshop, @contact], html: {class: "contact-form d-none", data: {toggle_target: "element"}} do |form| %>
+    <%= form_for [@contact], html: {class: "contact-form d-none", data: {toggle_target: "element"}} do |form| %>
       <% if @contact.errors.any? %>
         <div id="error_explanation" class="bg-rose-200 pt-3 pb-1 mb-4 px-4 rounded-md">
           <div class="font-bold text-rose-700 text-sm pb-4"><%= pluralize(@contact.errors.count, "error") %> prohibited this page from being saved:</div>
