@@ -1,6 +1,8 @@
 .quienes-somos-mobile {
-  display: gird;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
 }
 
 .quienes-somos-text {
@@ -12,9 +14,11 @@
 
 .quienes-bottom {
   background-image: asset-url("quienes_somos/quienes_somos_left.png");
-  height: 62vh;
+  height: 60vh;
   width: 100vw;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #quienes-somos-img {

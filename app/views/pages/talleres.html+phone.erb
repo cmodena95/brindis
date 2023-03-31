@@ -1,0 +1,17 @@
+ <div class="talleres-mobile" data-controller="galleria">
+    <section class="slider" style="padding-left: 1rem;">
+      <button class="slider__control prev"></button>
+      <button class="slider__control next"></button>
+      <div class="slider__container" data-multislide="true" data-step="4">
+        <% @talleres.each do |taller|  %>
+          <div class="slider__item" style="width: calc(100% / 2);">
+            <div class ="card-talleres-mobile">
+             <%= cl_image_tag taller.photo.key, style: "height: 15vh;" %>
+             <%= taller.name %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </section>
+    <%= image_tag "talleres/entrada_byn.png", id: "talleres-img" %>
+  </div>
