@@ -1,0 +1,20 @@
+.politica-mobile {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#politica-img {
+  height: 280px;
+  width: 190px;
+  background-size: cover;
+}
+
+.politica-img-container {
+  position: fixed;
+  bottom: 50px;
+  left: 16px;
+}
+
+.politica-text {
+  margin: 48px;
+}
