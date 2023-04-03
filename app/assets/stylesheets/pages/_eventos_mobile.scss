@@ -1,7 +1,69 @@
 .eventos-mobile {
-  margin-top: 86px;
+  margin: 86px 12px 0 12px;
 }
 
 #eventos-text {
   font-size: 16px;
+}
+
+#eventos-pasados-text {
+  font-size: 16px;
+  margin: 12px;
+}
+
+.events-card-container {
+  box-shadow: 0 5px 5px rgba(0,0,0,0.25);
+  width: 50vw;
+  height: 36vh;
+  border-radius: 5px;
+}
+
+.events-card-title {
+  background-color: green;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 4px 4px 0 0;
+  padding: 3px;
+   p {
+    margin: 0;
+   }
+}
+
+.events-card-desc {
+  padding: 0.5rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+.events-card-date {
+  p {
+    margin: 0;
+  }
+}
+.events-card-subtitle {
+  background-color: black;
+  color: white;
+  padding: 3px;
+    p {
+      margin: 0px;
+    }
+}
+
+.events-card-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#events-img {
+  height: 180px;
+  width: 90%;
+}
+
+.sub-container {
+  margin: 0 0.5rem;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.25);
+  border-radius: 4px;
 }
