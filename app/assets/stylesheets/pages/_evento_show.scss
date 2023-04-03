@@ -1,0 +1,39 @@
+.event-show {
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  padding: 6rem;
+  grid-gap: 5rem;
+}
+
+.event-show-left {
+  img {
+    height: 70vh;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.25);
+  }
+}
+
+.event-show-right {
+  p {
+    font-size: 1rem;
+  }
+}
+
+.photos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.event-photo {
+  height: 20vh;
+  width: 10vw;
+  object-fit: contain;
+  transition: transform .2s;
+  margin: auto;
+
+  &:hover {
+    transform: scale(2.5);
+  }
+}

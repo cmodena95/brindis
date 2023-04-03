@@ -1,0 +1,12 @@
+<div class="talleres-new" data-controller="trix">
+  <%= simple_form_for @event, html: {class: "new-form"} do |f| %>
+    <h4>Crear evento</h4>
+    <%= f.input :title, label: "Título" %>
+    <%= f.input :description, as: :rich_text_area, label: "Descripción" %>
+    <%= f.input :date, label: "Fecha", as: :string, input_html: { data: {controller: "flatpickr"}}  %>
+    <%= f.input :start_time, label: "Comienzo" %>
+    <%= f.input :end_time, label: "Final" %>
+    <%= f.input :poster, as: :file, label: "Poster" %>
+    <%= f.submit "Crear evento" %>
+  <% end %>
+</div>

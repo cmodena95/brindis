@@ -5,10 +5,12 @@ Rails.application.routes.draw do
   get "/quienes_somos", to: "pages#quienes_somos"
   get "/politica_de_cambio", to: "pages#politica_de_cambio"
   get "/talleres", to: "pages#talleres"
+  get "/eventos", to: "pages#eventos"
 
-  resources :workshops, only: [:new, :create, :show] do
-    resources :contacts, only: [:create]
-  end
+  resources :workshops, only: [:new, :create, :show]
+  resources :contacts, only: [:create]
+
+  resources :events, only: [:show, :new, :create, :edit, :update]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
