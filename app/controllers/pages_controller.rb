@@ -16,4 +16,10 @@ class PagesController < ApplicationController
   def eventos
     @events = Event.all.sort_by(&:created_at)
   end
+
+  def tienda
+  end
+
+  def home2
+  end
 end
