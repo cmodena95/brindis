@@ -13,14 +13,16 @@
 
 .text {
   background-color: $white;
-  box-shadow: 0 0 5px 10px $white;
-  border-radius: 5px;
+  box-shadow: 0 0 2px 10px #FFFFFE, 2px 2px 2px 10px rgba(0,0,0,0.25);
+  border-radius: 2px;
+  line-height: 0.5rem;
 }
 
 .home-outer {
   max-height: 100vh;
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 .home3 {
@@ -31,7 +33,7 @@
   background-size: 119%;
   background-repeat: no-repeat;
   background-position: 0%;
-  position: absolute;
+  position: relative;
   top: 0;
 }
 
@@ -82,15 +84,28 @@
 
 .quienes-somos-home {
   background-image: asset-url("inicio/cartel_publicitario_copy.png");
-  transform: translate(275%, -270%);
-  height: 35vh;
+  transform: translate(266%, -255%);
+  height: 38vh;
   width: 20vw;
   transition: 0.5s ease all;
 
   &:hover {
     transform: translate(275%, -270%) scale(1.25);
   }
+
+  img {
+    width: 6vw;
+  }
+
+  div {
+    transform: translate(4px, -44px);
+    width: 13.5vw;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+  }
 }
+
 
 .talleres-home {
   background-image: asset-url("inicio/Talleres.png");
@@ -108,7 +123,7 @@
   transition: 0.5s ease all;
   position: absolute;
   bottom: 11vh;
-  left: 31vw;
+  left: 30vw;
 
   &:hover {
     transform: scale(1.25);
@@ -166,4 +181,55 @@
   bottom: -32vh;
   right: -9vw;
   transform: rotate(55deg);
+}
+
+.home-upper {
+  position: absolute;
+  top: 0;
+}
+
+.sign {
+  position: absolute;
+  bottom: 30vh;
+  right: 0;
+  width: 10vw;
+}
+
+.cloud-1 {
+  position: absolute;
+  top: 7vh;
+  left: 34vw;
+  width: 20vw;
+  z-index: -1;
+}
+
+.cloud-2 {
+  position: absolute;
+  top: 11vh;
+  right: 9vw;
+  width: 18vw;
+  z-index: -1;
+}
+
+.item {
+  position: absolute;
+  border-radius: 0.25em;
+}
+
+.item-1 {
+  top: 10vh;
+  height: 12vh;
+  left: 39vw;
+}
+
+.item-2 {
+  top: 8vh;
+  height: 8vh;
+  left: 48vw;
+}
+
+.item-3 {
+  top: 10vh;
+  height: 15vh;
+  right: 15vw;
 }
