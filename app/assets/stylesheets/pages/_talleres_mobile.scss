@@ -1,0 +1,18 @@
+.talleres-mobile {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-height: 100vh;
+  overflow: hidden;
+  padding-top: 8vh;
+}
+
+// .card-talleres-mobile {
+//   margin: 20px;
+// }
+
+#talleres-img {
+  height: 100%;
+  width: 100vw;
+  object-fit: cover;
+  margin-top: 12px;
+}

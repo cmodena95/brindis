@@ -1,4 +1,12 @@
-<div class="navbar">
+<% agent = request.user_agent %>
+<% if agent =~ /Mobile/ %>
+  <div class="navbar-mobile">
+      <i class="fa-solid fa-bars menu-mobile"></i>
+      <%= image_tag "logo.png", class: "logo-mobile" %>
+      <%= image_tag "carito_location_mail_whp/Icono_Carrito.png", class: "carrito" %>
+    </div>
+   <% else %>
+  <div class="navbar">
   <div class="container">
     <%= link_to root_path do %>
       <%= image_tag "logo.png", class: "logo" %>
@@ -14,3 +22,4 @@
     </div>
   </div>
 </div>
+<% end %>
