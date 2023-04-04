@@ -7,6 +7,8 @@
   position: fixed;
   top: 0;
   padding: 0 4vw 0 4vw;
+  z-index: 10;
+  background: $white;
 
   & a {
     text-decoration: none;
@@ -27,4 +29,54 @@
 
 .menu-mobile {
   font-size: 24px;
+}
+
+
+
+// side menu
+.side-menu-mobile {
+  width: 65vw;
+  background-color: $white;
+  position: absolute;
+  // top: 0;<
+  margin-top: 80px;
+  transform: translate(-340px, 0px);
+  transition: 0.5s ease all;
+}
+
+.menu-display {
+  transform: translate(0px, 0px);
+}
+
+.overlay {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  background: black;
+  opacity: 0.25;
+}
+
+
+#slide-img {
+  height: 113px;
+  width: 86px;
+}
+
+#inicio {
+  margin: auto auto auto 0px;
+  font-size: 16px;
+}
+
+.side-inicio {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+// to be added to .home_mobile when menu opens
+.bg-fixed {
+  position: relative;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
 }

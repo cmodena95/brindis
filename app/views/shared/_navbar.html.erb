@@ -1,25 +1,61 @@
 <% agent = request.user_agent %>
 <% if agent =~ /Mobile/ %>
   <div class="navbar-mobile">
-      <i class="fa-solid fa-bars menu-mobile"></i>
-      <%= image_tag "logo.png", class: "logo-mobile" %>
-      <%= image_tag "carito_location_mail_whp/Icono_Carrito.png", class: "carrito" %>
-    </div>
-   <% else %>
-  <div class="navbar">
-  <div class="container">
-    <%= link_to root_path do %>
-      <%= image_tag "logo.png", class: "logo" %>
+    <% unless current_page?(root_path) %>
+      <i class="fa-solid fa-bars menu-mobile" data-action="click->slide#display"></i>
     <% end %>
+    <%= image_tag "logo.png", class: "logo-mobile" %>
+    <%= image_tag "carito_location_mail_whp/Icono_Carrito.png", class: "carrito" %>
+  </div>
 
-    <div class="navbar-flex">
-      <%= link_to "Inicio", root_path %>
-      <%= link_to "Productos", "#" %>
-      <%= link_to "Quienes somos", quienes_somos_path %>
-      <%= link_to "Contacto", "#" %>
-      <%= link_to "Preguntas Frequentes", "#" %>
-      <%= image_tag "carito_location_mail_whp/Icono_Carrito.png", class: "carrito" %>
+  <% unless current_page?(root_path) %>
+    <div class="side-menu-mobile" data-slide-target="menu">
+      <div class="side-inicio">
+        <%= image_tag "dibujos_maggie/calles/calles_pag_web_copy-01.png", id: "slide-img" %>
+        <p id="inicio">inicio</p>
+      </div>
+      <div class="side-inicio">
+        <%= image_tag "inicio/Tienda.png", id: "slide-img" %>
+        <p id="inicio">Productos</p>
+      </div>
+      <div class="side-inicio">
+        <%= image_tag "quienes_somos/quienes_somos_pagina.png", id: "slide-img" %>
+        <p id="inicio">Quienes Somos</p>
+      </div>
+      <div class="side-inicio">
+        <%= image_tag "inicio/showroom.png", id: "slide-img" %>
+        <p id="inicio">Contacto</p>
+      </div>
+      <div class="side-inicio">
+        <%= image_tag "inicio/Eventos.png", id: "slide-img" %>
+        <p id="inicio">Eventos</p>
+      </div>
+      <div class="side-inicio">
+        <%= image_tag "inicio/Talleres.png", id: "slide-img" %>
+        <p id="inicio">Talleres</p>
+      </div>
+      <div class="side-inicio">
+        <%= image_tag "inicio/basura.png", id: "slide-img" %>
+        <p id="inicio">Política de Cambio</p>
+      </div>
+    </div>
+  <% end %>
+
+<% else %>
+  <div class="navbar">
+    <div class="container">
+      <%= link_to root_path do %>
+        <%= image_tag "logo.png", class: "logo" %>
+      <% end %>
+
+      <div class="navbar-flex">
+        <%= link_to "Inicio", root_path %>
+        <%= link_to "Productos", "#" %>
+        <%= link_to "Quienes somos", quienes_somos_path %>
+        <%= link_to "Contacto", "#" %>
+        <%= link_to "Preguntas Frequentes", "#" %>
+        <%= image_tag "carito_location_mail_whp/Icono_Carrito.png", class: "carrito" %>
+      </div>
     </div>
   </div>
-</div>
 <% end %>

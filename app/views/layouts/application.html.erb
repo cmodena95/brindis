@@ -12,9 +12,12 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
+  <body data-controller="slide">
     <%= render "shared/navbar" %>
-    <%= yield %>
-    <%= image_tag "carito_location_mail_whp/logo_wpp.png", id: "wpp-logo" %>
+
+    <div data-slide-target="background">
+      <%= yield %>
+      <%= image_tag "carito_location_mail_whp/logo_wpp.png", id: "wpp-logo" %>
+    </div>
   </body>
 </html>
