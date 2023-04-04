@@ -1,0 +1,30 @@
+.navbar-mobile {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding: 0 4vw 0 4vw;
+
+  & a {
+    text-decoration: none;
+    color: $black;
+  }
+}
+
+.navbar-flex-mobile {
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+  align-items: center;
+}
+
+.logo-mobile {
+  height: 4vh;
+}
+
+.menu-mobile {
+  font-size: 24px;
+}

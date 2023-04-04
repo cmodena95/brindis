@@ -1,4 +1,12 @@
-<div class="navbar">
+<% agent = request.user_agent %>
+<% if agent =~ /Mobile/ %>
+  <div class="navbar-mobile">
+      <i class="fa-solid fa-bars menu-mobile"></i>
+      <%= image_tag "logo.png", class: "logo-mobile" %>
+      <%= image_tag "carito_location_mail_whp/Icono_Carrito.png", class: "carrito" %>
+    </div>
+   <% else %>
+  <div class="navbar">
   <div class="container">
     <%= link_to root_path do %>
       <%= image_tag "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/206/817/themes/common/logo-643016315-1590195607-8fc32b97496cb2f5d217abc0492901a51590195607-480-0.png?0", class: "logo" %>
@@ -14,3 +22,4 @@
     </div>
   </div>
 </div>
+<% end %>
