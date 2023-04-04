@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  skip_before_action :authenticate_user!, except: [:dashboard]
+
   def home
   end
 
@@ -14,6 +16,13 @@ class PagesController < ApplicationController
   end
 
   def eventos
-    @events = Event.all.sort_by(&:created_at)
+    @events_upcoming = Event.where("date <= ?", Date.today).sort_by(&:date)
+    @events_past = Event.where("date >= ?", Date.today).sort_by(&:date)
+  end
+
+  def tienda
+  end
+
+  def dashboard
   end
 end

@@ -1,9 +1,19 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@200;400&family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,400&display=swap');
 // Define fonts for body and headers
-$body-font: 'Roboto Serif', serif;
+$body-font: 'Roboto', sans-serif;
 $headers-font: 'Roboto Serif', serif;
+
+@font-face {
+  font-family: "Roboto-Italic";
+  src: url("Roboto-Italic.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("Roboto-Medium.ttf") format('truetype');
+}
+
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
@@ -24,6 +34,7 @@ p {
 
 strong {
   font-weight: 600 !important;
+  font-family: 'Roboto', sans-serif;
 }
 
 .trix-content {

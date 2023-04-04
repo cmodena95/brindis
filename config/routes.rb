@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get "/politica_de_cambio", to: "pages#politica_de_cambio"
   get "/talleres", to: "pages#talleres"
   get "/eventos", to: "pages#eventos"
+  get "/tienda", to: "pages#tienda"
+  get "/dashboard", to: "pages#dashboard"
 
   resources :workshops, only: [:new, :create, :show]
   resources :contacts, only: [:create]

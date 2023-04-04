@@ -59,6 +59,7 @@
 
 .showroom_contact {
   margin: 20px 0;
+  font-weight: 500;
   p {
     margin: 0;
     font-size: 16px;
@@ -78,9 +79,13 @@
 
 .inside-text {
   margin: 0;
-  padding: 8px;
+  padding: 8  px;
   font-size: 18px;
   text-align: center;
+
+  em {
+    font-weight: 300;
+  }
 }
 
 .icon-bottom{

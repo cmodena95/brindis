@@ -4,20 +4,22 @@
     <% unless current_page?(root_path) %>
       <i class="fa-solid fa-bars menu-mobile" data-action="click->slide#display"></i>
     <% end %>
-    <%= image_tag "logo.png", class: "logo-mobile" %>
+    <%= link_to root_path do %>
+      <%= image_tag "logo.png", class: "logo-mobile" %>
+    <% end %>
     <%= image_tag "carito_location_mail_whp/Icono_Carrito.png", class: "carrito" %>
   </div>
 
   <% unless current_page?(root_path) %>
     <div class="side-menu-mobile" data-slide-target="menu">
-      <div class="side-inicio">
+      <a href="<%= root_path %>" class="side-inicio">
         <%= image_tag "dibujos_maggie/calles/calles_pag_web_copy-01.png", id: "slide-img" %>
         <p id="inicio">inicio</p>
-      </div>
-      <div class="side-inicio">
+      </a>
+      <a href="<%= products_path %>"class="side-inicio">
         <%= image_tag "inicio/Tienda.png", id: "slide-img" %>
         <p id="inicio">Productos</p>
-      </div>
+      </a>
       <div class="side-inicio">
         <%= image_tag "quienes_somos/quienes_somos_pagina.png", id: "slide-img" %>
         <p id="inicio">Quienes Somos</p>
