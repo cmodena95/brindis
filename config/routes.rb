@@ -7,8 +7,6 @@ Rails.application.routes.draw do
   get "/talleres", to: "pages#talleres"
   get "/eventos", to: "pages#eventos"
   get "/tienda", to: "pages#tienda"
-  get "/home2", to: "pages#home2"
-  get "/home3", to: "pages#home3"
 
   resources :workshops, only: [:new, :create, :show]
   resources :contacts, only: [:create]

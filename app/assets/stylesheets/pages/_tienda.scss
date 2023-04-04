@@ -1,0 +1,58 @@
+.tienda {
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  margin-top: 10vh;
+
+  & > div > img:first-child {
+    height: 20vh;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  & > div > img:nth-child(2) {
+    height: 90vh;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.tienda-left {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.tienda-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  img {
+    height: 10vh;
+  }
+
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 18vw;
+  }
+}
+
+.tienda-btn {
+  text-decoration: none;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.05);
+  width: 10vw;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.25);
+
+  p {
+    margin-bottom: 0;
+  }
+
+  i {
+    color: rgba(0,0,0,0.25);
+  }
+}
