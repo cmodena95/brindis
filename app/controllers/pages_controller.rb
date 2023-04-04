@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  skip_before_action :authenticate_user!, except: [:dashboard]
+
   def home
   end
 
@@ -21,6 +23,6 @@ class PagesController < ApplicationController
   def tienda
   end
 
-  def home2
+  def dashboard
   end
 end
