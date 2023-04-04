@@ -14,6 +14,13 @@ class PagesController < ApplicationController
   end
 
   def eventos
-    @events = Event.all.sort_by(&:created_at)
+    @events_upcoming = Event.where("date <= ?", Date.today).sort_by(&:date)
+    @events_past = Event.where("date >= ?", Date.today).sort_by(&:date)
+  end
+
+  def tienda
+  end
+
+  def home2
   end
 end

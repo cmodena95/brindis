@@ -2,7 +2,7 @@
   <div class="eventos">
     <div class="eventos-row">
       <h5 class="bold">EVENTOS POR VENIR</h5>
-      <% @events.take(5).each do |event| %>
+      <% @events_upcoming.take(5).each do |event| %>
         <div class="eventos-card">
           <%= cl_image_tag event.poster.key %>
 
@@ -18,7 +18,7 @@
 
     <div class="eventos-row">
       <h5 class="bold">EVENTOS PASADOS</h5>
-      <% @events.take(5).each do |event| %>
+      <% @events_past.take(5).each do |event| %>
         <div class="eventos-card">
           <%= cl_image_tag event.poster.key %>
           <div>

@@ -1,22 +1,50 @@
-<div class="home">
-  <div class="home-grid">
-    <div></div>
-    <%= link_to showroom_path do %>
-    <% end %>
-    <div class="inner-grid">
-      <%= link_to quienes_somos_path, class: "inner-grid-item" do %>
-      <% end %>
-      <%= link_to politica_de_cambio_path, class: "inner-grid-item" do %>
-      <% end %>
-    </div>
-    <%= link_to talleres_path do %>
-    <% end %>
+<div class="home-outer">
+  <%= image_tag "wetransfer/PNG/decorativos_13.png", class: "lake" %>
+  <%= image_tag "inicio/Fondo_Politica_de_cambio_Inicio.png", class: "grass grass-1" %>
+  <%= image_tag "inicio/Fondo_Politica_de_cambio_Inicio.png", class: "grass grass-2" %>
+  <%= image_tag "inicio/Fondo_Politica_de_cambio_Inicio.png", class: "grass grass-3" %>
+  <%= image_tag "inicio/Fondo_Politica_de_cambio_Inicio.png", class: "grass grass-4" %>
 
-    <div></div>
-    <div class="info-grid" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <div class="home3">
+    <a href="<%= eventos_path %>" class="building eventos-home">
+      <p class="text">Eventos</p>
+    </a>
+
+    <a href="<%= tienda_path %>" class="building tienda-home">
+      <p class="text">Tienda Brindis</p>
+    </a>
+
+    <a href="<%= showroom_path %>" class="building showroom-home">
+      <p class="text">Showroom</p>
+    </a>
+
+    <a class="building quienes-somos-home" href="<%= quienes_somos_path %>">
+      <div>
+        <%= image_tag "quienes_somos/quienes_somos_pagina.png" %>
+        <p class="text">Quienes Somos</p>
+      </div>
+    </a>
+
+    <a class="building talleres-home" href="<%= talleres_path %>" >
+      <p class="text">Talleres</p>
+    </a>
+
+    <a class="building politica-home" href="<%= politica_de_cambio_path %>" >
+      <%= image_tag "carito_location_mail_whp/Icono_Planta.png" %>
+      <%= image_tag "inicio/basura.png" %>
+      <p class="text">Politica de Cambio</p>
+    </a>
+
+    <div class="info-home" data-bs-toggle="modal" data-bs-target="#exampleModal">
       <p>Proyecto Brindis invita a la creación de prendas cómodas y versátiles. Usar brindis es vestir con estilo. Es aceptarnxs y aceptar a todxs. Somos un proyecto familiar, creado por tres hermanas que surge como una opción alternative a la industria de la moda. Buscamos generar una producción humana y consciente dentro de nuestras posibilidades.</p>
     </div>
-    <div></div>
+
+    <%= image_tag "wetransfer/PNG/cartel_02.png", class: "sign" %>
+    <%= image_tag "wetransfer/PNG/nube_02.png", class: "cloud-1" %>
+    <%= image_tag "fotos_pagina/remera-rufino.png", class: "item item-1" %>
+    <%= image_tag "fotos_pagina/remera-rufino.png", class: "item item-2" %>
+    <%= image_tag "wetransfer/PNG/nube_01.png", class: "cloud-2" %>
+    <%= image_tag "fotos_pagina/remera-rufino.png", class: "item item-3" %>
   </div>
 </div>
 
