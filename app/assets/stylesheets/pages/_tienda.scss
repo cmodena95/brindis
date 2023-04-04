@@ -3,10 +3,15 @@
   grid-template-columns: 3fr 4fr;
   margin-top: 10vh;
 
+  a {
+    text-decoration: none;
+  }
+
   & > div > img:first-child {
     height: 20vh;
     width: 100%;
     object-fit: cover;
+    margin-left: 4vw;
   }
 
   & > div > img:nth-child(2) {
@@ -29,7 +34,7 @@
     height: 10vh;
   }
 
-  & > div {
+  & > a {
     display: flex;
     align-items: center;
     justify-content: space-between;
