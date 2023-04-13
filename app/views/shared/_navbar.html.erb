@@ -13,10 +13,11 @@
     <% end %>
 
     <div class="navbar-flex">
+      <%= link_to "Admin", dashboard_path if user_signed_in? %>
       <%= link_to "Inicio", root_path %>
-      <%= link_to "Productos", "#" %>
+      <%= link_to "Productos", "https://brindisespumante.com.ar/productos/" %>
       <%= link_to "Quienes somos", quienes_somos_path %>
-      <%= link_to "Contacto", "https://brindisespumante.com.ar/contacto/" %>
+      <%= link_to "Contacto", showroom_path %>
       <%= link_to "Preguntas Frequentes", "https://brindisespumante.com.ar/preguntas-frecuentes/" %>
       <%= image_tag "carito_location_mail_whp/Icono_Carrito.png", class: "carrito" %>
     </div>

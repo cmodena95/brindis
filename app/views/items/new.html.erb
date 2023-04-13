@@ -1,0 +1,7 @@
+<%= simple_form_for @item, html: {class: "new-form", style: "margin-left: auto; margin-right: auto;"} do |f| %>
+  <h5>Nubes</h5>
+  <%= f.input :link, label: "URL de producto" %>
+  <%= f.input :position, collection: Item::POSITIONS, label: "Posición" %>
+  <%= f.input :photo, as: :file, label: "Imagen" %>
+  <%= f.submit "Cambiar item" %>
+<% end %>

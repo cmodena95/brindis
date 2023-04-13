@@ -1,0 +1,5 @@
+<%= simple_form_for @billboard, html: {class: "new-form", style: "margin-left: auto; margin-right: auto;"} do |f| %>
+  <h5>Cartel</h5>
+  <%= f.input :text, label: "Texto" %>
+  <%= f.submit "Cambiar texto de cartel" %>
+<% end %>

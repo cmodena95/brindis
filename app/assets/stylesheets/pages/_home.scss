@@ -239,12 +239,14 @@
 .item {
   position: absolute;
   border-radius: 0.25em;
+  object-fit: cover;
 }
 
 .item-1 {
   top: 10vh;
   height: 12vh;
   left: 39vw;
+  width: 4vw;
 }
 
 .item-2 {
@@ -257,6 +259,7 @@
   top: 10vh;
   height: 15vh;
   right: 15vw;
+  width: 5vw;
 }
 
 .info-home {
@@ -274,4 +277,13 @@
   p {
     margin: 0;
   }
+}
+
+.billboard-text {
+  max-width: 8vw;
+  position: absolute;
+  bottom: 45vh;
+  right: 1vw;
+  text-align: center;
+  font-size: 1rem;
 }

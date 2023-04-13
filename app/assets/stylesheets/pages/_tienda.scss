@@ -6,24 +6,22 @@
   a {
     text-decoration: none;
   }
-
-  & > div > img:first-child {
-    height: 20vh;
-    width: 100%;
-    object-fit: cover;
-    margin-left: 4vw;
-  }
-
-  & > div > img:nth-child(2) {
-    height: 90vh;
-    width: 100%;
-    object-fit: contain;
-  }
 }
 
 .tienda-left {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
+  background-image: asset-url("tienda_online/espejo_byn.png");
+  height: 90vh;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    margin-right: 1vw;
+  }
 }
 
 .tienda-right {

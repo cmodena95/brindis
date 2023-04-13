@@ -7,12 +7,16 @@
     <div>
       <p>
         <%= image_tag "carito_location_mail_whp/logo_wpp.png", class: "icon" %>
-        5491130824325
+        <%= link_to "https://wa.me/5491130824325?text=Hola", target: "_blank" do %>
+          5491130824325
+        <% end %>
       </p>
       <p>
         <%= image_tag "carito_location_mail_whp/icono_mail.png", class: "icon" %>
-        brindiespumante@gmail.com</p>
-      <p>
+        <%= link_to "mailto:brindiespumante@gmail.com", target: "_blank" do %>
+          brindiespumante@gmail.com</p>
+        <% end %>
+      <p style="margin-bottom: -0.5rem;">
         <%= image_tag "carito_location_mail_whp/icono_location.png", class: "icon" %>
         Cespedes 3146, entre Conde y Cap.Gral.Ramon Freire
       </p>
@@ -43,18 +47,25 @@
         <% end %>
 
         <div class="d-flex flex-column">
-          <p>Dejanos tu mensaje y mail para poder ayudarte en tu consulta!<br>Muchas Gracias :)</p>
-          <%= form.label :email %>
+          <p>Dejanos tu mensaje a que hora queres pasar y en el caso de retiro, tambien tu numero de pedido. Gracias!</p>
+          <%= form.label :email, class: "text-sm" %>
           <%= form.text_field :email %>
         </div>
 
-        <div class="d-flex flex-column">
-          <%= form.label :n_de_pedido %>
-          <%= form.text_area :n_de_pedido %>
+        <div class="d-flex">
+          <div class="d-flex flex-column" style="width: 50%; padding-right: 1rem;">
+            <%= form.label "Nº de pedido", class: "text-sm" %>
+            <%= form.text_field :order_number %>
+          </div>
+
+          <div class="d-flex flex-column">
+            <%= form.label :horario, class: "text-sm" %>
+            <%= form.time_field :time %>
+          </div>
         </div>
 
         <div class="d-flex flex-column">
-          <%= form.label :content %>
+          <%= form.label :content, class: "text-sm" %>
           <%= form.text_area :content %>
         </div>
 
@@ -63,7 +74,7 @@
           <%= form.text_field :nickname, :hint => 'Leave this field blank!' %>
         </div>
 
-        <%= form.submit "Send Message", class: "button-white" %>
+        <%= form.submit "Enviar", class: "button-white" %>
 
       <% end %>
 
