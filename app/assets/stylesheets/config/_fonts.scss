@@ -1,6 +1,5 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@200;400&family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,400&display=swap');
 // Define fonts for body and headers
 $body-font: 'Roboto', sans-serif;
 $headers-font: 'Roboto Serif', serif;
@@ -34,7 +33,8 @@ p {
 }
 
 strong {
-  font-family: "Roboto-Medium" !important;
+  font-weight: 600 !important;
+  font-family: 'Roboto', sans-serif;
 }
 
 .trix-content {

@@ -1,15 +1,17 @@
 <div class="showroom_mobile">
   <div class="showroom_mobile_top">
     <div class="showroom_message">
-     <p class="inside-text">Cualquier consulta no dudes en mandarnos un mensaje :)</p>
+     <p class="inside-text"><em>Cualquier consulta no dudes en mandarnos un mensaje :)</em></p>
     </div>
     <div class="showroom_contact">
-      <p><%= image_tag "carito_location_mail_whp/logo_wpp.png", id: "wpp-logo-showroom" %> +5491130824325</p>
-      <p><%= image_tag "carito_location_mail_whp/icono_mail.png", id: "mail-logo" %>brindisespumante@gmail.com</p>
-      <p><%= image_tag "carito_location_mail_whp/icono_location.png", id: "location-logo" %>Cespedes 3146, entre Conde y Cap.Gral. Ramón Freire</p>
+      <div style="padding: 0 1rem;">
+        <div class="d-flex align-items-center" style="text-decoration: underline;"><%= image_tag "carito_location_mail_whp/logo_wpp.png", id: "wpp-logo-showroom" %><p style="margin-left: 0.6rem;">+5491130824325</p></div>
+        <p style="text-decoration: underline;"><%= image_tag "carito_location_mail_whp/icono_mail.png", id: "mail-logo" %>brindisespumante@gmail.com</p>
+        <div class="d-flex"><%= image_tag "carito_location_mail_whp/icono_location.png", id: "location-logo" %><p style="margin-left: 0.75rem;">Cespedes 3146, entre Conde y Cap.Gral. Ramón Freire<p></div>
+      </div>
       <div class="subtitle">
         <%= image_tag "showroom/linea.png", id: "linea" %>
-        <h3><strong>SHOWROOM</strong></h3>
+        <h3 id="sub-showroom"><strong>SHOWROOM</strong></h3>
       </div>
     </div>
   </div>
