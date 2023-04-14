@@ -13,6 +13,11 @@ application.register("galleria", GalleriaController)
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import MoreInfoController from "./more_info_controller"
+application.register("more-info", MoreInfoController)
+
+import SlideController from "./slide_controller"
+application.register("slide", SlideController)
 
 import ToggleController from "./toggle_controller"
 application.register("toggle", ToggleController)

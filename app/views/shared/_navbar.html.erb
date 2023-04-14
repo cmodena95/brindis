@@ -1,16 +1,54 @@
 <% agent = request.user_agent %>
 <% if agent =~ /Mobile/ %>
   <div class="navbar-mobile">
-      <i class="fa-solid fa-bars menu-mobile"></i>
-      <%= image_tag "logo.png", class: "logo-mobile" %>
-      <%= image_tag "carito_location_mail_whp/Icono_Carrito.png", class: "carrito" %>
-    </div>
-   <% else %>
-  <div class="navbar">
-  <div class="container">
-    <%= link_to root_path do %>
-      <%= image_tag "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/206/817/themes/common/logo-643016315-1590195607-8fc32b97496cb2f5d217abc0492901a51590195607-480-0.png?0", class: "logo" %>
+    <% unless current_page?(root_path) %>
+      <i class="fa-solid fa-bars menu-mobile" data-action="click->slide#display"></i>
     <% end %>
+    <%= link_to root_path do %>
+      <%= image_tag "logo.png", class: "logo-mobile" %>
+    <% end %>
+    <%= image_tag "carito_location_mail_whp/Icono_Carrito.png", class: "carrito" %>
+  </div>
+
+  <% unless current_page?(root_path) %>
+    <div class="side-menu-mobile" data-slide-target="menu">
+      <a href="<%= root_path %>" class="side-inicio" id="remove_underline">
+        <%= image_tag "dibujos_maggie/calles/calles_pag_web_copy-01.png", id: "slide-img" %>
+        <p id="inicio">inicio</p>
+      </a>
+      <a href="<%= tienda_path %>"class="side-inicio" id="remove_underline">
+        <%= image_tag "inicio/Tienda.png", id: "slide-img" %>
+        <p id="inicio">Productos</p>
+      </a>
+      <a href="<%= quienes_somos_path %>" class="side-inicio" id="remove_underline">
+        <%= image_tag "quienes_somos/quienes_somos_pagina.png", id: "slide-img" %>
+        <p id="inicio">Quienes Somos</p>
+      </a>
+      <a href="<%= showroom_path %>" class="side-inicio" id="remove_underline">
+        <%= image_tag "inicio/showroom.png", id: "slide-img" %>
+        <p id="inicio">Contacto</p>
+      </a>
+      <a href="<%= eventos_path %>" class="side-inicio" id="remove_underline">
+        <%= image_tag "inicio/Eventos.png", id: "slide-img" %>
+        <p id="inicio">Eventos</p>
+      </a>
+      <a href="<%= talleres_path %>" class="side-inicio" id="remove_underline">
+        <%= image_tag "inicio/Talleres.png", id: "slide-img" %>
+        <p id="inicio">Talleres</p>
+      </a>
+      <a href="<%= politica_de_cambio_path %>" class="side-inicio" id="remove_underline">
+        <%= image_tag "inicio/basura.png", id: "slide-img" %>
+        <p id="inicio">Política de Cambio</p>
+      </a>
+    </div>
+  <% end %>
+
+<% else %>
+  <div class="navbar">
+    <div class="container">
+      <%= link_to root_path do %>
+        <%= image_tag "logo.png", class: "logo" %>
+      <% end %>
 
     <div class="navbar-flex">
       <%= link_to "Admin", dashboard_path if user_signed_in? %>
@@ -22,7 +60,7 @@
       <%= link_to "https://brindisespumante.com.ar/checkout/v3/start/1220615424/65085d14039d9f81b8190a8341f44bab4d8452af?from_store=1" do %>
         <%= image_tag "carito_location_mail_whp/Icono_Carrito.png", class: "carrito" %>
       <% end %>
+
     </div>
   </div>
-</div>
 <% end %>

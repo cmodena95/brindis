@@ -12,10 +12,12 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
+  <body data-controller="slide">
     <%= render "shared/navbar" %>
-    <%= render "shared/flashes" %>
-    <%= yield %>
-    <%= render "shared/whatsapp" %>
+    <div data-slide-target="background">
+      <%= render "shared/flashes" %>
+      <%= yield %>
+      <%= render "shared/whatsapp" %>
+    </div>
   </body>
 </html>
