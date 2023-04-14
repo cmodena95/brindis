@@ -10,14 +10,19 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <% agent = request.user_agent %>
   </head>
 
   <body data-controller="slide">
     <%= render "shared/navbar" %>
-    <div data-slide-target="background">
-      <%= render "shared/flashes" %>
-      <%= yield %>
-      <%= render "shared/whatsapp" %>
-    </div>
+    <% if agent =~ /Mobile/ %>
+      <div data-slide-target="background">
+    <% end %>
+    <%= render "shared/flashes" %>
+    <%= yield %>
+    <%= render "shared/whatsapp" %>
+    <% if agent =~ /Mobile/ %>
+      </div>
+    <% end %>
   </body>
 </html>
