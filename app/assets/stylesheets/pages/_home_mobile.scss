@@ -1,13 +1,17 @@
 .home_mobile {
   position: relative;
+  background-image: asset-url("mobile/background-mobile.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: 6vh;
 
-  img {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  // img {
+  //   position: absolute;
+  //   z-index: -1;
+  //   width: 100%;
+  //   height: 100%;
+  //   object-fit: contain;
+  // }
 
   a {
     height: 30vh;
@@ -31,7 +35,9 @@
   }
 
   #link-eventos {
-    transform: translate(5px, -128px);
+    position: absolute;
+    bottom: 9vh;
+    left: 6vw;
   }
 
 }
