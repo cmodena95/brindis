@@ -49,13 +49,30 @@
 
     <%= image_tag "wetransfer/PNG/nube_02.png", class: "cloud-1" %>
     <% if @cloud_item_left %>
-      <%= cl_image_tag @cloud_item_left.photo.key, class: "item item-1" %>
+      <%= link_to @cloud_item_left.link do %>
+        <%= cl_image_tag @cloud_item_left.photo.key, class: "item item-1" %>
+      <% end %>
     <% else %>
       <%= image_tag "fotos_pagina/remera-rufino.png", class: "item item-1" %>
     <% end %>
-    <%= image_tag "fotos_pagina/remera-rufino.png", class: "item item-2" %>
+
+    <% if @cloud_item_center %>
+      <%= link_to @cloud_item_center.link do %>
+        <%= cl_image_tag @cloud_item_center.photo.key, class: "item item-2" %>
+      <% end %>
+    <% else %>
+      <%= image_tag "fotos_pagina/remera-rufino.png", class: "item item-2" %>
+    <% end %>
+
     <%= image_tag "wetransfer/PNG/nube_01.png", class: "cloud-2" %>
-    <%= image_tag "fotos_pagina/remera-rufino.png", class: "item item-3" %>
+
+    <% if @cloud_item_right %>
+      <%= link_to @cloud_item_right.link do %>
+        <%= cl_image_tag @cloud_item_right.photo.key, class: "item item-3" %>
+      <% end %>
+    <% else %>
+      <%= image_tag "fotos_pagina/remera-rufino.png", class: "item item-3" %>
+    <% end %>
   </div>
 </div>
 

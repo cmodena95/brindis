@@ -4,10 +4,10 @@ class ContactsController < ApplicationController
     @contact.request = request
     authorize @contact
     if @contact.deliver
-      flash.now[:success] = 'Message sent!'
+      flash.now[:success] = 'Mensaje enviado con exito!'
       render "workshops/show", status: :unprocessable_entity
     else
-      flash.now[:error] = 'Could not send message'
+      flash.now[:error] = 'No se pudo enviar el mensaje'
       render "workshops/show", status: :unprocessable_entity
     end
   end
