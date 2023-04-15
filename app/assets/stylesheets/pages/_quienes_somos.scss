@@ -2,11 +2,12 @@
   display: grid;
   grid-template-columns: 3fr 4fr;
   grid-gap: 7.25vw;
+  height: 100vh;
 
-  & > img {
-    height: 100vh;
+  & img {
+    height: 80vh;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
 }
 

@@ -15,7 +15,7 @@
     </a>
 
     <a href="<%= showroom_path %>" class="building showroom-home">
-      <p class="text">Showroom</p>
+      <p class="text">Contacto</p>
     </a>
 
     <a class="building quienes-somos-home" href="<%= quienes_somos_path %>">
@@ -40,11 +40,39 @@
     </div>
 
     <%= image_tag "wetransfer/PNG/cartel_02.png", class: "sign" %>
+
+    <% if @billboard_item %>
+      <h5 class="billboard-text"><%= @billboard_item.text %></h5>
+    <% else %>
+      <h5 class="billboard-text">10% de descuento</h5>
+    <% end %>
+
     <%= image_tag "wetransfer/PNG/nube_02.png", class: "cloud-1" %>
-    <%= image_tag "fotos_pagina/remera-rufino.png", class: "item item-1" %>
-    <%= image_tag "fotos_pagina/remera-rufino.png", class: "item item-2" %>
+    <% if @cloud_item_left %>
+      <%= link_to @cloud_item_left.link do %>
+        <%= cl_image_tag @cloud_item_left.photo.key, class: "item item-1" %>
+      <% end %>
+    <% else %>
+      <%= image_tag "fotos_pagina/remera-rufino.png", class: "item item-1" %>
+    <% end %>
+
+    <% if @cloud_item_center %>
+      <%= link_to @cloud_item_center.link do %>
+        <%= cl_image_tag @cloud_item_center.photo.key, class: "item item-2" %>
+      <% end %>
+    <% else %>
+      <%= image_tag "fotos_pagina/remera-rufino.png", class: "item item-2" %>
+    <% end %>
+
     <%= image_tag "wetransfer/PNG/nube_01.png", class: "cloud-2" %>
-    <%= image_tag "fotos_pagina/remera-rufino.png", class: "item item-3" %>
+
+    <% if @cloud_item_right %>
+      <%= link_to @cloud_item_right.link do %>
+        <%= cl_image_tag @cloud_item_right.photo.key, class: "item item-3" %>
+      <% end %>
+    <% else %>
+      <%= image_tag "fotos_pagina/remera-rufino.png", class: "item item-3" %>
+    <% end %>
   </div>
 </div>
 
@@ -66,12 +94,6 @@
           <p>Registrarte en Brindis</p>
           <i class="fa-solid fa-caret-right"></i>
         </a>
-        <a class="modal-btn">
-          <p>Invitado</p>
-          <i class="fa-solid fa-caret-right"></i>
-        </a>
-      </div>
-      <div class="modal-footer">
       </div>
     </div>
   </div>

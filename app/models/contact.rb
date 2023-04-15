@@ -1,6 +1,8 @@
 class Contact < MailForm::Base
   attribute :email,     validate: /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
   attribute :content, validate: true
+  attribute :order_number, validate: true
+  attribute :time, validate: true
   attribute :nickname, captcha: true
 
   def headers

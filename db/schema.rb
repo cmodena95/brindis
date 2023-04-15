@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_31_150651) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_13_002943) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -52,11 +52,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_31_150651) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "billboards", force: :cascade do |t|
+    t.string "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "contacts", force: :cascade do |t|
     t.string "email"
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "order_number"
+    t.time "time"
   end
 
   create_table "events", force: :cascade do |t|
@@ -67,6 +75,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_31_150651) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.time "end_time"
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string "link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "position"
   end
 
   create_table "users", force: :cascade do |t|

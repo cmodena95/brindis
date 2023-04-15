@@ -2,6 +2,10 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, except: [:dashboard]
 
   def home
+    @cloud_item_left = Item.find_by(position: "Nube izquierda") || nil
+    @cloud_item_center = Item.find_by(position: "Nube central") || nil
+    @cloud_item_right = Item.find_by(position: "Nube derecha") || nil
+    @billboard_item = Billboard.last || nil
   end
 
   def showroom

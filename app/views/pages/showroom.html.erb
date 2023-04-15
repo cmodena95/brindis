@@ -2,72 +2,87 @@
   <%= image_tag "showroom/showroom_pagina.png" %>
 
   <div class="showroom-right">
-    <h6>Nuestro showroom...</h6>
+    <p>Nuestro Showroom se encuentra en Colegiales. No solo vendemos ropa, sino que también usamos el espacio para dar talleres, hacer eventos y generar encuentros culturales donde todxs se sientan bienvenidxs</p>
 
     <div>
       <p>
         <%= image_tag "carito_location_mail_whp/logo_wpp.png", class: "icon" %>
-        5491130824325
+        <%= link_to "https://wa.me/5491130824325?text=Hola", target: "_blank" do %>
+          5491130824325
+        <% end %>
       </p>
       <p>
         <%= image_tag "carito_location_mail_whp/icono_mail.png", class: "icon" %>
-        brindiespumante@gmail.com</p>
-      <p>
+        <%= link_to "mailto:brindiespumante@gmail.com", target: "_blank" do %>
+          brindiespumante@gmail.com</p>
+        <% end %>
+      <p style="margin-bottom: -0.5rem;">
         <%= image_tag "carito_location_mail_whp/icono_location.png", class: "icon" %>
         Cespedes 3146, entre Conde y Cap.Gral.Ramon Freire
       </p>
       <%= image_tag "showroom/linea.png", class: "linea" %>
     </div>
 
-    <div>
-    <p class="shadow-center">
-      <strong>
-        Lunes a viernes de 13 a 18 hs con previo aviso para retirar
-      </strong>
-    </p>
+    <div data-controller="toggle">
+      <p class="shadow-left" data-action="click->toggle#toggle" style="cursor: pointer;">
+        <strong>El Showroom va a estar abierto de Martes a Jueves de 13 a 18 hs con previo aviso para retirar.</strong> 
+        <br>Cualquier consulta no dudes en mandarnos un mensaje :)
+      </p>
 
-    <div class="showroom-grid" style="align-items: flex-start;">
-      <div class="shadow-center d-none" data-controller="toggle">Déjanos tu mensaje a que hora querés pasar y en el caso de retiro, también tu numero de pedido. Gracias!</div>
+      <div class="showroom-grid" style="align-items: flex-start;">
+        <div data-toggle-target="placeholder" class="placeholder-showroom"></div>
+        <div class="shadow-center d-none">
+          Déjanos tu mensaje a que hora querés pasar y en el caso de retiro, también tu numero de pedido. 
+          <br>
+          Gracias!
+        </div>
 
-      <%= form_for [@contact], html: {class: "contact-form mt-0", data: {toggle_target: "element"}} do |form| %>
-        <% if @contact.errors.any? %>
-          <div id="error_explanation" class="bg-rose-200 pt-3 pb-1 mb-4 px-4 rounded-md">
-            <div class="font-bold text-rose-700 text-sm pb-4"><%= pluralize(@contact.errors.count, "error") %> prohibited this page from being saved:</div>
+        <%= form_for [@contact], html: {class: "contact-form mt-0 d-none", data: {toggle_target: "element"}} do |form| %>
+          <% if @contact.errors.any? %>
+            <div id="error_explanation" class="bg-rose-200 pt-3 pb-1 mb-4 px-4 rounded-md">
+              <div class="font-bold text-rose-700 text-sm pb-4"><%= pluralize(@contact.errors.count, "error") %> prohibited this page from being saved:</div>
 
-            <ul class="pb-0 mb-0">
-              <% @contact.errors.each do |error| %>
-                <li class="text-rose-600 pl-4 text-sm"><%= error.full_message %></li>
-              <% end %>
-            </ul>
+              <ul class="pb-0 mb-0">
+                <% @contact.errors.each do |error| %>
+                  <li class="text-rose-600 pl-4 text-sm"><%= error.full_message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <div class="d-flex flex-column">
+            <p>Dejanos tu mensaje a que hora queres pasar y en el caso de retiro, tambien tu numero de pedido. Gracias!</p>
+            <%= form.label :email, class: "text-sm" %>
+            <%= form.text_field :email %>
           </div>
+
+          <div class="d-flex">
+            <div class="d-flex flex-column" style="width: 50%; padding-right: 1rem;">
+              <%= form.label "Nº de pedido", class: "text-sm" %>
+              <%= form.text_field :order_number %>
+            </div>
+
+            <div class="d-flex flex-column">
+              <%= form.label :horario, class: "text-sm" %>
+              <%= form.time_field :time %>
+            </div>
+          </div>
+
+          <div class="d-flex flex-column">
+            <%= form.label :content, class: "text-sm" %>
+            <%= form.text_area :content %>
+          </div>
+
+          <div class= "d-none">
+            <%= form.label :nickname %>
+            <%= form.text_field :nickname, :hint => 'Leave this field blank!' %>
+          </div>
+
+          <%= form.submit "Enviar", class: "button-white" %>
+
         <% end %>
 
-        <div class="d-flex flex-column">
-          <p>Dejanos tu mensaje y mail para poder ayudarte en tu consulta!<br>Muchas Gracias :)</p>
-          <%= form.label :email %>
-          <%= form.text_field :email %>
-        </div>
-
-        <div class="d-flex flex-column">
-          <%= form.label :n_de_pedido %>
-          <%= form.text_area :n_de_pedido %>
-        </div>
-
-        <div class="d-flex flex-column">
-          <%= form.label :content %>
-          <%= form.text_area :content %>
-        </div>
-
-        <div class= "d-none">
-          <%= form.label :nickname %>
-          <%= form.text_field :nickname, :hint => 'Leave this field blank!' %>
-        </div>
-
-        <%= form.submit "Send Message", class: "button-white" %>
-
-      <% end %>
-
-      <%= image_tag "inicio/showroom.png" %>
-    </div>
+        <%= image_tag "inicio/showroom.png" %>
+      </div>
   </div>
 </div>

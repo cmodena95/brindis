@@ -11,8 +11,9 @@ Rails.application.routes.draw do
 
   resources :workshops, only: [:new, :create, :show]
   resources :contacts, only: [:create]
-
   resources :events, only: [:show, :new, :create, :edit, :update]
+  resources :items, only: [:new, :create]
+  resources :billboards, only: [:new, :create]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -18,7 +18,7 @@
   }
 
   & > div > input {
-    height: 2rem;
+    height: 1.5rem;
   }
 
   div {
@@ -26,7 +26,7 @@
   }
 
   p {
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
 
   label {
@@ -44,4 +44,17 @@
 
 .new-form {
   margin-top: 20vh;
+}
+
+#contact_order_number, #contact_time {
+  border: none;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
+}
+
+.placeholder-showroom {
+  margin-right: 22.5rem;
+  width: 100%;
 }
