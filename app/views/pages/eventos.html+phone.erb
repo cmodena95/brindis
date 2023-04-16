@@ -6,7 +6,7 @@
         <button class="slider__control prev"></button>
         <button class="slider__control next"></button>
         <div class="slider__container" data-multislide="true" data-step="4" style="padding: 2vh 0;">
-        <% @events.each do |event| %>
+        <% @events_upcoming.each do |event| %>
           <div class="events-card-container slider__item" style="width: calc(100% / 2); background: transparent; padding: 0; height: auto;">
             <div class="sub-container">
               <div class="events-card-title">
@@ -41,7 +41,7 @@
         <button class="slider__control prev"></button>
         <button class="slider__control next"></button>
         <div class="slider__container" data-multislide="true" data-step="4" style="padding: 2vh 0;">
-        <% @events.each do |event| %>
+        <% @events_past.each do |event| %>
           <div class="events-card-container slider__item" style="width: calc(100% / 2); background: transparent; padding: 0; height: auto;">
             <div class="sub-container">
               <div class="events-card-title">

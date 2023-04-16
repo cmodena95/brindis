@@ -1,0 +1,41 @@
+.tienda-mobile-top {
+  background-image: asset-url("tienda_online/espejo_byn.png");
+  height: 70vh;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 9vh;
+  background-position-x: 2rem;
+
+  a {
+    margin-right: 3vw;
+    margin-top: 13vh;
+  }
+}
+
+.tienda-mobile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  
+  a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    width: 3rem;
+  }
+}
+
+.tienda-btn-mobile {
+  margin-left: 0.5rem;
+  width: 100%;
+}

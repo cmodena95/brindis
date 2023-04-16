@@ -23,21 +23,29 @@
     transform: translate(40px, 150px);
   }
   #link-showroom {
-    transform: translate(205px, -85px);
+    transform: translate(198px, -35px);
   }
 
   #link-quienes_somos {
-    transform: translate(1px, -85px);
+    transform: translate(1px, -45px);
   }
 
   #link-talleres {
-    transform: translate(189px, -128px)
+    transform: translate(179px, -318px);
   }
 
   #link-eventos {
     position: absolute;
-    bottom: 9vh;
+    bottom: 4vh;
     left: 6vw;
   }
+}
 
+.billboard-text-mobile {
+  text-align: center;
+  position: absolute;
+  right: 19vw;
+  top: 17vh;
+  max-width: 24vw;
+  font-size: 1rem;
 }
