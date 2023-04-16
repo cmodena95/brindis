@@ -52,10 +52,10 @@
         <%#= image_tag "logo.png", class: "logo" %>
       <% end %>
 
-      <div class="navbar-flex">
+      <div class="navbar-flex" id="non-serif">
         <%= link_to "Admin", dashboard_path if user_signed_in? %>
         <%= link_to "Inicio", root_path %>
-        <%= link_to "Productos", "https://brindisespumante.com.ar/productos/" %>
+        <%= link_to "Productos", tienda_path %>
         <%= link_to "Quienes somos", quienes_somos_path %>
         <%= link_to "Contacto", showroom_path %>
         <%= link_to "Preguntas Frequentes", "https://brindisespumante.com.ar/preguntas-frecuentes/" %>
