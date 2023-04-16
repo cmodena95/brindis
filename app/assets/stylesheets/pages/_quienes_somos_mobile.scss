@@ -1,7 +1,7 @@
 .quienes-somos-mobile {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  // height: 100vh;
   margin: 6vh auto 0 auto;
 }
 
@@ -24,7 +24,7 @@
   width: 100vw;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
 }
 
 #quienes-somos-img {
