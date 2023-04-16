@@ -1,8 +1,8 @@
 <% agent = request.user_agent %>
 <%= link_to "https://wa.me/5491130824325?text=Hola", target: "_blank" do %>
   <% if agent =~ /Mobile/ %>
-      <%= image_tag "carito_location_mail_whp/logo_wpp.png", id: "wpp-logo" %>
+      <%= image_tag "logo_wpp.png", id: "wpp-logo" %>
   <% else %>
-    <%= image_tag "carito_location_mail_whp/logo_wpp.png", id: "wpp-logo-desktop" %>
+    <%= image_tag "logo_wpp.png", id: "wpp-logo-desktop" %>
   <% end %>
 <% end %>
