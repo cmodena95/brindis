@@ -15,7 +15,7 @@
 
   <body data-controller="slide">
     <% if agent =~ /Mobile/ %>
-      <div class="menu-overlay d-none" data-slide-target="overlay">
+      <div class="menu-overlay d-none" data-slide-target="overlay" data-action="click->slide#close">
       </div>
     <% end %>
     <%= render "shared/navbar" %>
