@@ -1,69 +1,74 @@
 <div class="eventos-mobile">
-  <div class="comming-events">
-    <strong><p id="eventos-text">Eventos por venir</p></strong>
-    <div data-controller="galleria">
-      <section class="slider" style="padding-left: 1rem;">
-        <button class="slider__control prev"></button>
-        <button class="slider__control next"></button>
-        <div class="slider__container" data-multislide="true" data-step="4" style="padding: 2vh 0;">
-        <% @events_upcoming.each do |event| %>
-          <div class="events-card-container slider__item" style="width: calc(100% / 2); background: transparent; padding: 0; height: auto;">
-            <div class="sub-container">
-              <div class="events-card-title">
-              <strong> <p><%= event.title %></p> </strong>
-              <p><%= event.date %></p>
+  <% if @events_upcoming.empty? %>
+   <h5 style="text-align: center;">Aún no hay eventos. Vuelve pronto! :)</h5>
+  <% else %>
+    <div class="comming-events">
+      <strong><p id="eventos-text">Eventos por venir</p></strong>
+      <div data-controller="galleria">
+        <section class="slider" style="padding-left: 1rem;">
+          <button class="slider__control prev"></button>
+          <button class="slider__control next"></button>
+          <div class="slider__container" data-multislide="true" data-step="4" style="padding: 2vh 0;">
+          <% @events_upcoming.each do |event| %>
+            <div class="events-card-container slider__item" style="width: calc(100% / 2); background: transparent; padding: 0; height: auto;">
+              <div class="sub-container">
+                <div class="events-card-title">
+                <strong> <p><%= event.title %></p> </strong>
+                <p><%= event.date %></p>
+                </div>
+                <div class="events-card-subtitle">
+                  <p>subtitle</p>
+                  <p>TIME</p>
+                  <p>little description</p>
+                </div>
+                <div class="events-card-img">
+                  <%= image_tag "talleres/entrada_byn.png", id: "events-img" %>
+                </div>
               </div>
-              <div class="events-card-subtitle">
-                <p>subtitle</p>
-                <p>TIME</p>
-                <p>little description</p>
-              </div>
-              <div class="events-card-img">
-                <%= image_tag "talleres/entrada_byn.png", id: "events-img" %>
+              <div class="events-card-desc">
+                <p>Día de la primavera y feria</p>
+                <p>Showroom b_rindis</p>
               </div>
             </div>
-            <div class="events-card-desc">
-              <p>Día de la primavera y feria</p>
-              <p>Showroom b_rindis</p>
-            </div>
-          </div>
-        <% end %>
+          <% end %>
         </section>
+      </div>
     </div>
-  </div>
+  <% end %>
 
+  <% unless @events_past.empty? %>
+    <div class="past-events">
+      <strong><p id="eventos-pasados-text">Eventos Pasados</p></strong>
 
-  <div class="past-events">
-    <strong><p id="eventos-pasados-text">Eventos Pasados</p></strong>
-
-    <div data-controller="galleria">
-      <section class="slider" style="padding-left: 1rem;">
-        <button class="slider__control prev"></button>
-        <button class="slider__control next"></button>
-        <div class="slider__container" data-multislide="true" data-step="4" style="padding: 2vh 0;">
-        <% @events_past.each do |event| %>
-          <div class="events-card-container slider__item" style="width: calc(100% / 2); background: transparent; padding: 0; height: auto;">
-            <div class="sub-container">
-              <div class="events-card-title">
-              <strong> <p><%= event.title %></p> </strong>
-              <p><%= event.date %></p>
+      <div data-controller="galleria">
+        <section class="slider" style="padding-left: 1rem;">
+          <button class="slider__control prev"></button>
+          <button class="slider__control next"></button>
+          <div class="slider__container" data-multislide="true" data-step="4" style="padding: 2vh 0;">
+          <% @events_past.each do |event| %>
+            <div class="events-card-container slider__item" style="width: calc(100% / 2); background: transparent; padding: 0; height: auto;">
+              <div class="sub-container">
+                <div class="events-card-title">
+                <strong> <p><%= event.title %></p> </strong>
+                <p><%= event.date %></p>
+                </div>
+                <div class="events-card-subtitle">
+                  <p>subtitle</p>
+                  <p>TIME</p>
+                  <p>little description</p>
+                </div>
+                <div class="events-card-img">
+                  <%= image_tag "talleres/entrada_byn.png", id: "events-img" %>
+                </div>
               </div>
-              <div class="events-card-subtitle">
-                <p>subtitle</p>
-                <p>TIME</p>
-                <p>little description</p>
-              </div>
-              <div class="events-card-img">
-                <%= image_tag "talleres/entrada_byn.png", id: "events-img" %>
+              <div class="events-card-desc">
+                <p>Día de la primavera y feria</p>
+                <p>Showroom b_rindis</p>
               </div>
             </div>
-            <div class="events-card-desc">
-              <p>Día de la primavera y feria</p>
-              <p>Showroom b_rindis</p>
-            </div>
-          </div>
-        <% end %>
-        </section>
+          <% end %>
+          </section>
+      </div>
     </div>
-  </div>
+  <% end %>
 </div>

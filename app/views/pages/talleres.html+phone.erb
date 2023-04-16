@@ -1,4 +1,7 @@
- <div class="talleres-mobile" data-controller="galleria">
+<div class="talleres-mobile" data-controller="galleria">
+  <% if @talleres.empty? %>
+    <h5 style="padding: 1rem; text-align: center;">Aún no hay talleres. Vuelve pronto! :)</h5>
+  <% else %>
     <section class="slider" style="padding-left: 1rem; margin-top: 18px;">
       <button class="slider__control prev"></button>
       <button class="slider__control next"></button>
@@ -6,12 +9,13 @@
         <% @talleres.each do |taller|  %>
           <div class="slider__item" style="width: calc(100% / 2);">
             <div class ="card-talleres-mobile">
-             <%= cl_image_tag taller.photo.key, style: "height: 15vh;" %>
-             <%= taller.name %>
+              <%= cl_image_tag taller.photo.key, style: "height: 15vh;" %>
+              <%= taller.name %>
             </div>
           </div>
         <% end %>
       </div>
     </section>
-    <%= image_tag "talleres/entrada_byn.png", id: "talleres-img" %>
-  </div>
+  <% end %>
+  <%= image_tag "talleres/entrada_byn.png", id: "talleres-img" %>
+</div>
