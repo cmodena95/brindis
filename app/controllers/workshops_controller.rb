@@ -1,4 +1,6 @@
 class WorkshopsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:show]
+
   def show
     @workshop = Workshop.find(params[:id])
     @contact = Contact.new

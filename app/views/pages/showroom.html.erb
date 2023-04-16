@@ -8,17 +8,18 @@
       <p>
         <%= image_tag "carito_location_mail_whp/logo_wpp.png", class: "icon" %>
         <%= link_to "https://wa.me/5491130824325?text=Hola", target: "_blank" do %>
-          5491130824325
+          <strong>5491130824325</strong>
         <% end %>
       </p>
       <p>
         <%= image_tag "carito_location_mail_whp/icono_mail.png", class: "icon" %>
         <%= link_to "mailto:brindiespumante@gmail.com", target: "_blank" do %>
-          brindiespumante@gmail.com</p>
+          <strong>brindiespumante@gmail.com</strong>
         <% end %>
+      </p>
       <p style="margin-bottom: -0.5rem;">
         <%= image_tag "carito_location_mail_whp/icono_location.png", class: "icon" %>
-        Cespedes 3146, entre Conde y Cap.Gral.Ramon Freire
+        <strong>Cespedes 3146, entre Conde y Cap.Gral.Ramon Freire</strong>
       </p>
       <%= image_tag "showroom/linea.png", class: "linea" %>
     </div>
@@ -50,6 +51,8 @@
             </div>
           <% end %>
 
+          <%= form.hidden_field :source, value: "showroom" %>
+
           <div class="d-flex flex-column">
             <p>Dejanos tu mensaje a que hora queres pasar y en el caso de retiro, tambien tu numero de pedido. Gracias!</p>
             <%= form.label :email, class: "text-sm" %>
@@ -64,7 +67,7 @@
 
             <div class="d-flex flex-column">
               <%= form.label :horario, class: "text-sm" %>
-              <%= form.time_field :time %>
+              <%= form.time_field :time, value: "%H:%M" %>
             </div>
           </div>
 

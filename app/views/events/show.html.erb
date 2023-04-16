@@ -7,7 +7,7 @@
     <h5><strong><em><%= @event.title.upcase %></em></strong></h5>
     <p><strong><%= @event.description %></strong></p>
     <br>
-    <p><strong>A continuación les dejamos videos y fotos del Evento:</strong></p>
+    <p style="text-shadow: none;"><strong>A continuación les dejamos videos y fotos del Evento:</strong></p>
     
     <div class="photos-grid">
       <% @event.photos.take(8).each do |photo| %>

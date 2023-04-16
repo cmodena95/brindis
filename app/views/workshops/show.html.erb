@@ -29,6 +29,8 @@
         </div>
       <% end %>
 
+      <%= form.hidden_field :source, value: "workshop" %>
+
       <div class="d-flex flex-column">
         <p>Dejanos tu mensaje y mail para poder ayudarte en tu consulta!<br>Muchas Gracias :)</p>
         <%= form.label :email %>
