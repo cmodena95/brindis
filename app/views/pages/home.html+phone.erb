@@ -1,15 +1,17 @@
-<div class = "home_mobile">
-  <%#= image_tag "mobile/background-mobile.png" %>
-    <%= link_to tienda_path, id: "link-tienda" do %>
-    <% end %>
-    <%= link_to showroom_path, id: "link-showroom" do %>
-    <% end %>
-    <%= link_to quienes_somos_path, id: "link-quienes_somos" do %>
-    <% end %>
-    <%= link_to politica_de_cambio_path, id: "link-quienes_somos" do %>
-    <% end %>
-    <%= link_to talleres_path, id: "link-talleres" do %>
-    <% end %>
-    <%= link_to eventos_path, id: "link-eventos" do %>
-    <% end %>
+<div class="home_mobile">
+  <% if @billboard_item %>
+    <h5 class="billboard-text-mobile"><%= @billboard_item.text %></h5>
+  <% end %>
+  <%= link_to tienda_path, id: "link-tienda" do %>
+  <% end %>
+  <%= link_to showroom_path, id: "link-showroom" do %>
+  <% end %>
+  <%= link_to quienes_somos_path, id: "link-quienes_somos" do %>
+  <% end %>
+  <%= link_to politica_de_cambio_path, id: "link-quienes_somos" do %>
+  <% end %>
+  <%= link_to talleres_path, id: "link-talleres" do %>
+  <% end %>
+  <%= link_to eventos_path, id: "link-eventos" do %>
+  <% end %>
 </div>
