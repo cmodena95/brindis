@@ -1,27 +1,32 @@
 <div class="politica-mobile">
   <div class="politica-text">
-    <p>
+    <p id="non-serif">
       Si no estás conforme con nuestro producto,
       puedes realizar un cambio del mismo de alguna de las siguientes formas
     </p>
-    <p>
+    <p id="non-serif">
       Ponte en contacto a
-      <strong>brindisespumante@gmail.com</strong>
+      <br>
+      <strong>
+        <%= link_to "mailto:brindiespumante@gmail.com", target: "_blank" do %>
+          brindisespumante@gmail.com
+        <% end %>
+      </strong>
     </p>
-    <p>
+    <p id="non-serif">
       Podrás cambiar el producto por otro del mismo valor. En caso de querer cambiarlo,
       deberás acercarte a nuestro local en Colegiales. Nosotras nos hacemos cargo de situaciones
       donde el producto llegue con algún error.
     </p>
-    <p>
+    <p id="non-serif">
       Los cambios solo pueden ser realizados durante los 30 días siguientes a la compra para
       evitar que te cobremos el pedido de cambio
     </p>
-    <p>
+    <p id="non-serif">
       <strong>No tenemos devolución</strong>
     </p>
   </div>
   <div class="politica-img-container">
-      <%= image_tag "politica/plant-garbage.png", id: "politica-img" %>
+    <%= image_tag "politica/plant-garbage.png", id: "politica-img" %>
   </div>
 </div>
