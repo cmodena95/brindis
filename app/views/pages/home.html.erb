@@ -42,7 +42,9 @@
     <%= image_tag "wetransfer/PNG/cartel_02.png", class: "sign" %>
 
     <% if @billboard_item %>
-      <h5 class="billboard-text"><%= @billboard_item.text %></h5>
+      <div class="billboard-box">
+        <h5 class="billboard-text"><%= @billboard_item.text %></h5>
+      </div>
     <% end %>
 
     <%= image_tag "wetransfer/PNG/nube_02.png", class: "cloud-1" %>

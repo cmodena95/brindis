@@ -1,5 +1,13 @@
 <%= simple_form_for @billboard, html: {class: "new-form", style: "margin-left: auto; margin-right: auto;"} do |f| %>
-  <h5>Cartel</h5>
+  <h5>Cartelera</h5>
   <%= f.input :text, label: "Texto" %>
   <%= f.submit "Cambiar texto de cartel" %>
+<% end %>
+
+<% unless @billboards.empty? %>
+  <ul style="width: 45vw; margin-left: auto; margin-right: auto; margin-top: 5vh;">
+    <% @billboards.each do |billboard| %>
+      <%= link_to "Deletar texto actual de cartelera (#{billboard.text})", billboard_path(billboard), data: {turbo_method: :delete} %>
+    <% end %>
+  </ul>
 <% end %>

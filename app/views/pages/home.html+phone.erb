@@ -1,6 +1,8 @@
 <div class="home_mobile">
   <% if @billboard_item %>
-    <h5 class="billboard-text-mobile"><%= @billboard_item.text %></h5>
+    <div class="billboard-box-mobile">
+      <h5 class="billboard-text-mobile"><%= @billboard_item.text %></h5>
+    </div>
   <% end %>
   <%= link_to tienda_path, id: "link-tienda" do %>
   <% end %>

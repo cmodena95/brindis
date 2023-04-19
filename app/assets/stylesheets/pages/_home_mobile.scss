@@ -41,11 +41,24 @@
   }
 }
 
-.billboard-text-mobile {
-  text-align: center;
+.billboard-box-mobile {
+  display: flex;
   position: absolute;
   right: 19vw;
-  top: 17vh;
+  top: 16vh;
+  width: 24vw;
+  height: 6vh;
   max-width: 24vw;
+  max-height: 6vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.billboard-text-mobile {
+  text-align: center;
+  // position: absolute;
+  // right: 19vw;
+  // top: 17vh;
+  // max-width: 24vw;
   font-size: 1rem;
 }
