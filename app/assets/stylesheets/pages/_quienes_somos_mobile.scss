@@ -1,8 +1,9 @@
 .quienes-somos-mobile {
   display: flex;
   flex-direction: column;
-  // height: 100vh;
-  margin: 6vh auto 0 auto;
+  margin: auto;
+  min-height: 100vh;
+  justify-content: center;
 }
 
 .quienes-somos-text {
@@ -10,6 +11,8 @@
   margin-top: 48px;
   padding: 0 48px;
   box-sizing: border-box;
+  flex-grow: 1;
+  padding-top: 6vh;
 
   p {
     font-size: 13px;
