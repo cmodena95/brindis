@@ -9,9 +9,9 @@
 
 <% unless @items.empty? %>
   <ul style="width: 45vw; margin-left: auto; margin-right: auto; margin-top: 5vh;">
-    <h5>Deletar elementos:</h5>
+    <h5>Borrar elementos:</h5>
     <% @items.each do |item| %>
-      <%= link_to "Deletar elemento de #{item.position}", item_path(item), data: {turbo_method: :delete} %>
+      <%= link_to "Borrar elemento de #{item.position}", item_path(item), data: {turbo_method: :delete} %>
     <% end %>
   </ul>
 <% end %>
