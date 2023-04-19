@@ -1,4 +1,4 @@
 User.create(
-  email: "123@123.com",
-  password: "123123"
+  email: "brindisespumante@gmail.com",
+  password: "Felicitas2710."
 )
