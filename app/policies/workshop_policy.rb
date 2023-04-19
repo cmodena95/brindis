@@ -13,4 +13,8 @@ class WorkshopPolicy < ApplicationPolicy
   def show?
     true
   end
+
+  def destroy?
+    user
+  end
 end

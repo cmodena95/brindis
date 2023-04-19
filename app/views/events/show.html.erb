@@ -7,6 +7,7 @@
     <h5 id="non-serif"><strong><em><%= @event.title.upcase %></em></strong></h5>
     <p><strong><%= @event.description %></strong></p>
     <br>
+    <%= link_to "Deletar evento", event_path(@event), data: {turbo_method: :delete} if user_signed_in? %>
     <p style="text-shadow: none;"><strong>A continuación les dejamos videos y fotos del Evento:</strong></p>
     
     <div class="photos-grid">

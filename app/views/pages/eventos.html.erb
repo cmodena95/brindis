@@ -26,11 +26,15 @@
         <% @events_past.take(5).each do |event| %>
           <div class="eventos-card">
             <%= cl_image_tag event.poster.key %>
-            <div>
-              <p id="non-serif"><strong><%= event.title.upcase %></strong></p>
-              <p id="non-serif"><strong><%= event.description.to_plain_text.truncate(50) %></strong> <%= link_to "Mas info", event_path(event), class: "bold" %></p>
-              <p id="non-serif">Fecha: <%= event.date.strftime("%e de %b %Y") %></p>
-              <p id="non-serif">Horarios: <%= event.start_time.strftime("%H:%M") %> a <%= event.end_time.strftime("%H:%M") %> hs.</p>
+            <div class="evento-info">
+              <div>
+                <p id="non-serif"><strong><%= event.title.upcase %></strong></p>
+                <p id="non-serif"><strong><%= event.description.to_plain_text.truncate(50) %></strong> <%= link_to "Mas info", event_path(event), class: "bold" %></p>
+              </div>
+              <div>
+                <p id="non-serif">Fecha: <%= event.date.strftime("%e de %b %Y") %></p>
+                <p id="non-serif">Horarios: <%= event.start_time.strftime("%H:%M") %> a <%= event.end_time.strftime("%H:%M") %> hs.</p>
+              </div>
             </div>
           </div>
         <% end %>

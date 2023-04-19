@@ -9,11 +9,11 @@ Rails.application.routes.draw do
   get "/tienda", to: "pages#tienda"
   get "/dashboard", to: "pages#dashboard"
 
-  resources :workshops, only: [:new, :create, :show]
+  resources :workshops, only: [:new, :create, :show, :destroy]
   resources :contacts, only: [:create]
-  resources :events, only: [:show, :new, :create, :edit, :update]
-  resources :items, only: [:new, :create]
-  resources :billboards, only: [:new, :create]
+  resources :events, only: [:show, :new, :create, :edit, :update, :destroy]
+  resources :items, only: [:new, :create, :destroy]
+  resources :billboards, only: [:new, :create, :destroy]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

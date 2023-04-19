@@ -23,6 +23,17 @@ class WorkshopsController < ApplicationController
     end
   end
 
+  def destroy
+    @workshop = Workshop.find(params[:id])
+    authorize @workshop
+
+    if @workshop.destroy
+      redirect_to talleres_path
+    else
+      render :show
+    end
+  end
+
   private
 
   def workshop_params

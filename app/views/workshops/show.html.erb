@@ -7,6 +7,8 @@
     <p id="non-serif"><%= @workshop.name.upcase %></p>
     <p><%= @workshop.description %></p>
 
+    <%= link_to "Deletar taller", workshop_path(@workshop), data: {turbo_method: :delete}, class: "mb-2" if user_signed_in? %>
+
     <div class="taller-show-btns">
       <%= link_to "Registrarse", "#", class: "button-grey" %>
       <%= button_to "Consulta", "#", class: "button-grey", data: { action: "click->toggle#toggle" } %>
