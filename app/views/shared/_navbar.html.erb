@@ -1,9 +1,7 @@
 <% agent = request.user_agent %>
 <% if agent =~ /Mobile/ %>
   <div class="navbar-mobile">
-    <% unless current_page?(root_path) %>
-      <i class="fa-solid fa-bars menu-mobile" data-action="click->slide#display"></i>
-    <% end %>
+    <i class="fa-solid fa-bars menu-mobile" data-action="click->slide#display"></i>
     <%= link_to root_path do %>
       <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/206/817/themes/common/logo-238479029-1681492343-1a7bfbbe807402a2c472c0ab13882f851681492343-480-0.png?0" class="logo-mobile">
       <%# <%= image_tag "logo.png", class: "logo-mobile" %>
@@ -13,38 +11,38 @@
     <% end %>
   </div>
 
-  <% unless current_page?(root_path) %>
-    <div class="side-menu-mobile" data-slide-target="menu">
-      <a href="<%= root_path %>" class="side-inicio" id="remove_underline">
-        <%= image_tag "dibujos_maggie/calles/calles_pag_web_copy-01.png", id: "slide-img" %>
-        <p id="inicio" style="font-family: 'Roboto', sans-serif;">Inicio</p>
-      </a>
-      <a href="<%= tienda_path %>"class="side-inicio" id="remove_underline">
-        <%= image_tag "inicio/Tienda.png", id: "slide-img" %>
-        <p id="inicio" style="font-family: 'Roboto', sans-serif;">Productos</p>
-      </a>
-      <a href="<%= quienes_somos_path %>" class="side-inicio" id="remove_underline">
-        <%= image_tag "quienes_somos/quienes_somos_pagina.png", id: "slide-img" %>
-        <p id="inicio" style="font-family: 'Roboto', sans-serif;">Quienes Somos</p>
-      </a>
-      <a href="<%= showroom_path %>" class="side-inicio" id="remove_underline">
-        <%= image_tag "showroom.png", id: "slide-img" %>
-        <p id="inicio" style="font-family: 'Roboto', sans-serif;">Contacto</p>
-      </a>
-      <a href="<%= eventos_path %>" class="side-inicio" id="remove_underline">
-        <%= image_tag "inicio/Eventos.png", id: "slide-img" %>
-        <p id="inicio" style="font-family: 'Roboto', sans-serif;">Eventos</p>
-      </a>
-      <a href="<%= talleres_path %>" class="side-inicio" id="remove_underline">
-        <%= image_tag "inicio/Talleres.png", id: "slide-img" %>
-        <p id="inicio" style="font-family: 'Roboto', sans-serif;">Talleres</p>
-      </a>
-      <a href="<%= politica_de_cambio_path %>" class="side-inicio" id="remove_underline">
-        <%= image_tag "inicio/basura.png", id: "slide-img" %>
-        <p id="inicio" style="font-family: 'Roboto', sans-serif;">Política de Cambio</p>
-      </a>
-    </div>
-  <% end %>
+
+  <div class="side-menu-mobile" data-slide-target="menu">
+    <a href="<%= root_path %>" class="side-inicio" id="remove_underline">
+      <%= image_tag "dibujos_maggie/calles/calles_pag_web_copy-01.png", id: "slide-img" %>
+      <p id="inicio" style="font-family: 'Roboto', sans-serif;">Inicio</p>
+    </a>
+    <a href="<%= tienda_path %>"class="side-inicio" id="remove_underline">
+      <%= image_tag "inicio/Tienda.png", id: "slide-img" %>
+      <p id="inicio" style="font-family: 'Roboto', sans-serif;">Productos</p>
+    </a>
+    <a href="<%= quienes_somos_path %>" class="side-inicio" id="remove_underline">
+      <%= image_tag "quienes_somos/quienes_somos_pagina.png", id: "slide-img" %>
+      <p id="inicio" style="font-family: 'Roboto', sans-serif;">Quienes Somos</p>
+    </a>
+    <a href="<%= showroom_path %>" class="side-inicio" id="remove_underline">
+      <%= image_tag "showroom.png", id: "slide-img" %>
+      <p id="inicio" style="font-family: 'Roboto', sans-serif;">Contacto</p>
+    </a>
+    <a href="<%= eventos_path %>" class="side-inicio" id="remove_underline">
+      <%= image_tag "inicio/Eventos.png", id: "slide-img" %>
+      <p id="inicio" style="font-family: 'Roboto', sans-serif;">Eventos</p>
+    </a>
+    <a href="<%= talleres_path %>" class="side-inicio" id="remove_underline">
+      <%= image_tag "inicio/Talleres.png", id: "slide-img" %>
+      <p id="inicio" style="font-family: 'Roboto', sans-serif;">Talleres</p>
+    </a>
+    <a href="<%= politica_de_cambio_path %>" class="side-inicio" id="remove_underline">
+      <%= image_tag "inicio/basura.png", id: "slide-img" %>
+      <p id="inicio" style="font-family: 'Roboto', sans-serif;">Política de Cambio</p>
+    </a>
+  </div>
+
 
 <% else %>
   <div class="navbar">
