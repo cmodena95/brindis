@@ -1,16 +1,18 @@
 .showroom_mobile {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .showroom_mobile_top {
-  height: 40vh;
-  padding: 10vh 4vw;
+  // height: 40vh;
+  // padding: 10vh 4vw;
 }
 
 .showroom_mobile_bottom{
   background-image: asset-url("showroom/showroom_pagina.png");
-  height: 60vh;
+  // height: 60vh;
+  flex-grow: 1;
   width: 100vw;
   background-size: cover;
 }
@@ -31,9 +33,9 @@
   flex-direction: column;
 }
 
-// #sub-showroom{
-//   z-index: 1;
-// }
+#sub-showroom {
+  margin: 0.5rem 0 0.75rem 0;
+}
 
 #wpp-logo-showroom {
   height: 36px;
@@ -62,7 +64,7 @@
 }
 
 .showroom_contact {
-  margin: 20px 0;
+  margin: 20px 0 0 0;
   font-weight: 500;
   p {
     margin: 0;
