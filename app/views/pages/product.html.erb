@@ -1,0 +1,81 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<div class="product-page">
+  <div class="product-left">
+    <div class="prod-info d-flex justify-content-between align-items-center">
+      <ul style="margin-bottom: 0;">
+        <li><h5 style="font-size: 1rem;">Product name</h5></li>
+      </ul>
+
+      <h5 style="font-size: 1rem;">Product price</h5>
+    </div>
+    <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/206/817/products/campera-saya1-516f16b12d47476b1a16815065696588-640-0.webp" style=" object-fit: cover;
+    width: 35vw;
+    height: 80vh;">
+  </div>
+
+  <div class="product-right" style="display: flex; flex-direction: column; justify-content: center;">
+    <%# tamaño y cantidad %>
+    <div style="border-bottom: 1.5px solid black; padding-bottom: 3vh;">
+      <div class="d-flex" style="width: 50%;">
+        <div class="d-flex" style="width: 50%;">
+          <p><strong>Talle</strong></p>
+          <%# size dropdown %>
+          <input>
+        </div>
+
+        <div class="d-flex" style="width: 50%;">
+          <p><strong>Cantidad</strong></p>
+          <%# quantity dropdown %>
+          <input>
+        </div>
+      </div>
+    </div>
+
+    <%# cuotas + descuento %>
+    <div class="d-flex align-items-center" style="border-bottom: 1.5px solid black; padding: 1vh 0;">
+      <img src="http://www.brindisespumante.com/assets/Icono_Planta-7514376d136212f58a0f4761124fe767235e7d30954d0505692a45c8fa933f49.png" style="height: 12vh;">
+
+      <div style="width: 100%; margin-left: 10px;">
+        <div class="d-flex justify-content-between" style="width: 100%; box-shadow: 0px 0px 5px rgba(0,0,0,0.5); border-radius: 5px; padding: 5px;">
+          <p style="margin-bottom: 0;">3 cuotas sin interes</p>
+          <div>
+            <%# card icons %>
+            <p style="margin-bottom: 0;">icons</p>
+          </div>
+        </div>
+        <p style="margin-bottom: 0; margin-top: 8px;"><strong>10% de descuento</strong></p>
+      </div>
+    </div>
+
+    <%# info %>
+    <div style="padding: 3vh 0; border-bottom: 1.5px solid black;">
+      <p>Info</p>
+    </div>
+
+    <%# envio %>
+    <div style="display: grid; grid-template-columns: 3fr 2fr; padding: 3vh 0; border-bottom: 1.5px solid black;">
+      <div>
+        <p>"Envío brindis"</p>
+        <p>Caba: $600</p>
+        <p>Vicente Lopez, Martinez, San Isidro: $1000</p>
+        <p>Victoria, San Fernando, Tigre, Don Torcuato, Garin, Benavidez: $1000</p>
+        <p>Pilar, Escobar, Quilmes, Lomas de Zamora, Banfield, Temperley: $1500</p>
+      </div>
+
+      <div class="d-flex">
+        <img src="https://i.ibb.co/LS1VsjB/envios.png" style="height: 5vh; margin-right: 1vw;">
+
+        <div>
+          <p><strong>Envio Gratis</strong></p>
+          <p>Domicilio Céspedes 3146 piso 1 , Colegiales - Atención de Lun. a Vie. de 13 a 18 con previo aviso</p>
+        </div>
+      </div>
+    </div>
+
+    <%# añadir %>
+    <%# btn here %>
+  </div>
+</div>

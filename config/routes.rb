@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "/eventos", to: "pages#eventos"
   get "/tienda", to: "pages#tienda"
   get "/dashboard", to: "pages#dashboard"
+  get "/product", to: "pages#product"
 
   resources :workshops, only: [:new, :create, :show, :destroy]
   resources :contacts, only: [:create]
