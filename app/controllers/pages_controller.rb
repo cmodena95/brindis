@@ -20,8 +20,8 @@ class PagesController < ApplicationController
   end
 
   def eventos
-    @events_upcoming = Event.where("date <= ?", Date.today).sort_by(&:date)
-    @events_past = Event.where("date >= ?", Date.today).sort_by(&:date)
+    @events_upcoming = Event.where("date >= ?", Date.today).sort_by(&:date)
+    @events_past = Event.where("date <= ?", Date.today).sort_by(&:date)
   end
 
   def tienda
