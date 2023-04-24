@@ -534,6 +534,7 @@
 
   .product-slider-image {
     height: 100%;
+    object-fit: cover;
   }
 
   // .serif {
