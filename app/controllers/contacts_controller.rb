@@ -6,15 +6,15 @@ class ContactsController < ApplicationController
     @contact.request = request
     authorize @contact
     if @contact.deliver
-      if params[:source] == "workshop"
+      if params[:contact][:source] == "workshop"
         redirect_to workshops_path(Workshop.last), notice: "Mensaje enviado con exito!"
       else
         redirect_to showroom_path, notice: "Mensaje enviado con exito!"
       end
     else
-      if params[:source] == "workshop"
+      if params[:contact][:source] == "workshop"
         flash.now[:error] = 'No se pudo enviar el mensaje'
-        render "workshops/show", status: :unprocessable_entity
+        render "workshops/show", status: :unprocessable_entity, locals: { '@workshop': Workshop.find(params[:contact][:workshop_id]) }
       else
         flash.now[:success] = 'No se pudo enviar el mensaje'
         render "pages/showroom", status: :unprocessable_entity
